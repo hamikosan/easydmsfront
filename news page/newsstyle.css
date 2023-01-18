@@ -126,7 +126,10 @@ header{
 .navbar{
     display:flex;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
+
 .navigation{
     padding: 10px;
     width: 25%;
@@ -324,6 +327,8 @@ header{
 .prewriting{
     margin-left: 97px;
     margin-right: 100px;
+    position:relative;
+    z-index:1;
 }
 .prewriting h3{
     color: #0077b3;
@@ -407,7 +412,7 @@ header{
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 3; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     margin-top: 120px;
     left:0;

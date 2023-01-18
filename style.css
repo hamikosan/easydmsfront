@@ -400,4 +400,142 @@ header{
     border-radius: 7px;
     margin-left: 95px;
   }
+/*medicine section*/
+/*search section*/
+.search_button_row{
+    margin-top: 10px;
+    padding: 10px;
+    display:flex;
+    justify-content: right ;
+}
 
+
+.search_button_row input{
+    padding: 10px;
+    border-radius: 7px;
+}
+
+
+.search_button_row button{
+    padding: 10px;
+    width: 130px;
+    background-color:#567764;
+    color:#cdda95;
+    border-radius: 7px;
+}
+.search_button button{
+    width: fit-content;
+}
+.search_button_row button:hover{
+    background-color: #0077b3;
+    color: #a4d5f6;
+    cursor: pointer;
+}
+/* search box for smrtphones */
+@media screen and (max-width: 460px){
+    .search_button_row{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 10%;
+    }    
+
+}
+/*page number*/
+
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #0077b3;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  .subnews{
+    margin-top: 20px;
+}
+/*medicine content*/
+.submed-title{
+    background-color: #0077b3;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+}
+.submed-row{
+    display: grid;
+    grid-template-columns: 5% 6% 69% 20%;
+}
+.submed-description *{
+    margin-block: 0;
+}
+
+.search-column{
+    padding: 8px;
+    margin: 2px;
+}
+.submed-column{
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #567764;
+}
+.submed-edit i{
+    font-size: 45px;
+    margin-left: 9px;
+}
+input.forchecksize{
+    width: 40px;
+    height: 40px;
+}
+.submed-checkbox{
+    background-color: #9ee9ff;
+}
+.med_category_devider{
+    display: none;
+}
+@media screen and (max-width: 460px){
+    .submed-row{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 65% 35%;
+    }
+    input.forchecksize{
+        width: 30px;
+        height: 30px;
+    }
+    .submed-edit i{
+        font-size: 35px;
+    }
+    .med_category_devider{
+        display: block;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, #cdda95, #9ee9ff, #0077b3);
+    }
+}
+
+@media screen and (min-width: 460px) and (Max-width: 1024px){
+    .submed-row{
+        display: grid;
+        grid-template-columns: 6% 6% 68% 20%;
+    }
+    input.forchecksize{
+        width: 20px;
+        height: 20px;
+    }
+    .submed-edit i{
+        font-size: 35px;
+    }
+}
