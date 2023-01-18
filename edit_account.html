@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Account</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <a class="close-icon" id="close-icon"><i class="fa fa-close" ></i></a>
+                <ul class="nav-list">
+                    <span class="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span><br><br><br>
+                    <li class="nav-item"><a href="report_page.html"><i class="fa fa-clipboard"></i> ADR Report</a></li>
+                    <li class="nav-item"><a href="report_check_page.html"><i class="fa fa-exclamation-circle"></i> Unsend Report List</a></li>
+                    <li class="nav-item"><a href="news page/news_list_page.html"><i class="fa fa-newspaper-o"></i> News Manager</a></li>
+                    <li class="nav-item"><a href="account_manager_page.html"><i class="fa fa-user-circle"></i> Account Manager</a></li>
+                    <li class="nav-item"><a href=""><i class="fa fa-mail-reply"></i> Logout</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <img src="image/logo.png" style="width:25%;height:25%;">
+        </div>
+    </header>
+    
+    <div class = "acc_container">
+        <div class="add_head">
+            <a href="account_manager_page.html" class="back-icon" id="backIcon"><i class="fa fa-arrow-left"></i></a>
+            <h1>Edit Account</h1>
+        </div>
+        <div class="account-detail">
+            <div class="account_detail_input add-column">
+                <h3>First Name</h3>
+                <input type="text" id="fname_input" name="fname_input">
+            </div>
+            <div class="account_detail_input add-column">
+                <h3>Last Name</h3>
+                <input type="text" id="lname_input" name="lname_input">
+            </div>
+            <div class="account_detail_input add-column">
+                <h3>Phone Number</h3>
+                <input type="text" id="pn_input" name="pn_input">
+            </div>
+        
+        
+            <div class="account_detail_input add-column">
+                <h3>Username</h3>
+                <input type="text" id="uname_input" name="uname_input">
+            </div>
+            <div class="account_detail_input add-column">
+                <h3>Password</h3>
+                <input type="text" id="pw_input" name="pw_input">
+            </div>
+            <div class="account_detail_input add-column">
+                <h3>Confirm Password</h3>
+                <input type="text" id="cpw_input" name="cpw_input">
+            </div>
+        </div>
+        <div class="security-detail">    
+            <div class="account_detail_input add-column">
+                <h3>Professional License Number</h3>
+                <input type="text" id="license_no" name="license_no">
+            </div>
+    
+            <button class="upacc_button" id="upacc" value="upacc">Update</button>
+        </div>
+               
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <a class="close-icon" id="close-icon"><i class="fa fa-close" ></i></a>
+                <ul class="nav-list">
+                    <span class="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span><br><br><br>
+                    <li class="nav-item"><a href="report_page.html"><i class="fa fa-clipboard"></i> ADR Report</a></li>
+                    <li class="nav-item"><a href="report_check_page.html"><i class="fa fa-exclamation-circle"></i> Unsend Report List</a></li>
+                    <li class="nav-item"><a href="news page/news_list_page.html"><i class="fa fa-newspaper-o"></i> News Manager</a></li>
+                    <li class="nav-item"><a href="account_manager_page.html"><i class="fa fa-user-circle"></i> Account Manager</a></li>
+                    <li class="nav-item"><a href=""><i class="fa fa-mail-reply"></i> Logout</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <img src="image/logo.png" style="width:25%;height:25%;">
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="interactable-section">
+            <div class="search-account">
+                <input type="text" id="searchacc" name="searchacc" placeholder="search">
+            </div>
+            <button id="add_acc" value="add_acc"><a href="add_account.html">Add Account</a></button>
+            <button id="del_acc" value="del_acc" onclick="deletePopUP()">Delete Account</button>
+        </div>
+        <div class="account-content">
+            <h2>*Admin account does not included.</h2>
+            <table class="center" id="account-report" >   
+                    <tr class="header">
+                        <th><input type="checkbox" id="delete_acc" value="delete_acc"></th>
+                        <th style="width:220px;">Name</th>
+                        <th style="width:220px;">Username</th>
+                        <th style="width:220px;">Password</th>
+                        <th style="width:220px;">Phone Number</th>
+                        <th style="width:220px;">License Number</th>
+                        <th class="account-edit">Edit</th>
+                    </tr>
+                     <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
+                        <td>Patient Name</td>
+                        <td>Username</td>
+                        <td>Password</td>
+                        <td>xxx-xxx-xxxx</td>
+                        <td>xxxxxxxxxxxxxx</td>
+                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
+                    </tr>
+              </table>
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <div id="delete_confirm">
+            <h1>Are you sure <br> you want to delete data?</h1><br>
+            <button class="confirm_button" id="confirm_button" value="yes">Yes</button>
+            <button class="no_button" id="no_button" value="no">No</button>
+        </div> 
+    </div>  
+    <script src="main.js"></script>
+</body>
+</html>
