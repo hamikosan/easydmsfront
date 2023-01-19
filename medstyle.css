@@ -241,7 +241,7 @@ header{
     cursor: pointer;
 }
 
-/* search box for smrtphones */
+/* search box for smartphones */
 @media screen and (max-width: 460px){
     .search_button_row{
         display: grid;
@@ -250,107 +250,6 @@ header{
     }    
 
 }
-/*Adding section*/
-.add_head h1{
-    font-size: 30px;
-    color: #0077b3;
-    margin: 0;
-}
-.add_head{
-    margin-top: 10px;
-    padding: 10px;
-    display:grid;
-    grid-template-columns: 50% 50%
-}
-.back-icon{
-    color: #0077b3;
-    font-size: 30px;
-}
-
-.add_row{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.add_row select{
-    padding: 10px;
-    border-radius: 7px;
-    border-style: none;
-    box-shadow:1px 2px 3px #0077b3;
-}
-
-.add_row input{
-    height: 35px;
-    width: 900px;
-    border-radius: 7px;
-    border-style: none;
-    box-shadow:1px 2px 3px #0077b3;
-}
-.add-column{
-    padding: 10px;
-    margin: 4px;
-}
-.link_check input{
-    width: 35px;
-    height: 35px;
-    box-shadow:1px 2px 3px #0077b3;
-    border-width: 0 3px 3px 0;
-}
-.add_row h3{
-    color: #0077b3;
-    margin: 0;
-}
-@media screen and (max-width: 460px){
-    .add_row{
-        display: grid;
-        grid-template-columns: 55% 45%;
-        grid-template-rows: 15% 50%;
-        
-    }
-    .add_row h3{
-        color: #0077b3;
-        margin: 0;
-        margin-top: 50px;
-    }
-    .add_row input{
-        height: 35px;
-        width: 210px;
-    }  
-    input.outsidelink {
-        width: 30px;
-        height: 30px;
-    }
-}
-/*writing page*/
-.prewriting{
-    margin-left: 97px;
-    margin-right: 100px;
-    position:relative;
-    z-index:1;
-}
-.prewriting h3{
-    color: #0077b3;
-    margin-bottom: 10px;
-}
-.add_page_button{
-    margin-top: 20px;
-}
-.page_add_button,.page_update_button{
-    margin-left: 15px;
-}
-.add_page_button button{
-    background-color: #0077b3;
-    color: #a4d5f6;
-    cursor: pointer;
-    width: 180px;
-    height: 40px;
-    font-size: 16px;
-    border-style: none;
-    border-radius: 7px;
-}
-
-
 /*page number*/
 
 .pagination {
@@ -415,3 +314,118 @@ header{
     border-radius: 7px;
     margin-left: 95px;
   }
+
+  /*Adding section*/
+.add_head h1{
+    font-size: 30px;
+    color: #0077b3;
+    margin: 0;
+}
+.add_head{
+    margin-top: 10px;
+    padding: 10px;
+    display:grid;
+    grid-template-columns: 44% 50%
+}
+.back-icon{
+    color: #0077b3;
+    font-size: 30px;
+}
+
+.med-detail{
+    display:block;
+}
+
+.med-detail select{
+    padding: 10px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow:1px 2px 3px #0077b3;
+}
+.med_detail_input{
+    display: flex;
+    justify-content: center;
+}
+.medname_input,.med_category_select{
+    text-align: center;
+}
+
+.med-detail input{
+    height: 35px;
+    width: 500px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow:1px 2px 3px #0077b3;
+}
+#dosage,#posad,#contraindication,#storage{
+    margin-right: 10px;
+}
+#indication{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+#cont_input{
+    margin-right: 27px;
+}
+#ind_input{
+    margin-right: 80px;
+}
+#sto_input{
+    margin-right: 16px;
+}
+.add-column{
+    padding: 10px;
+    margin: 4px;
+}
+.med-detail h3{
+    color: #0077b3;
+    margin: 0;
+}
+.med_detail_input input{
+    height: 100px;
+}
+.addmed_button,.upmed_button{
+    background-color: #0077b3;
+    color: #a4d5f6;
+    cursor: pointer;
+    height: 40px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 7px;
+    margin-left: 630px;  
+    margin-top: 10px;
+}
+@media screen and (max-width: 460px){
+    .med-detail{
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows: 15% 50%;
+        
+    }
+    .med-detail h3{
+        color: #0077b3;
+        margin: 0;
+        margin-top: 50px;
+    }
+    .med-detail input{
+        height: 35px;
+        width: 210px;
+    }  
+}
+textarea{
+    width: 500px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow:1px 2px 3px #0077b3;
+}
+.med_container button{
+    background-color: #0077b3;
+    color: #a4d5f6;
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 7px;
+    margin-left: 15px;
+}

@@ -261,7 +261,7 @@ header{
     margin-top: 10px;
     padding: 10px;
     display:grid;
-    grid-template-columns: 50% 50%
+    grid-template-columns: 44% 50%
 }
 .back-icon{
     color: #0077b3;
@@ -336,6 +336,10 @@ header{
 }
 .add_page_button{
     margin-top: 20px;
+    
+}
+.add_page_button a{
+    color: #a4d5f6;
 }
 .page_add_button,.page_update_button{
     margin-left: 15px;
@@ -448,3 +452,10 @@ header{
     border-radius: 7px;
     margin-left: 95px;
   }
+  textarea{
+    width: 100%;
+    height: max-content;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow:1px 2px 3px #0077b3;
+}
