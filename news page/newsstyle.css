@@ -325,8 +325,8 @@ header{
 }
 /*writing page*/
 .prewriting{
-    margin-left: 97px;
-    margin-right: 100px;
+    margin-left: 119px;
+    margin-right: 119px;
     position:relative;
     z-index:1;
 }
@@ -355,7 +355,7 @@ header{
     border-radius: 7px;
 }
 .outsidelink_form{
-    margin-left: 96px;
+    margin-left: 119px;
 }
 .outsidelink_form h3{
     color: #0077b3;
