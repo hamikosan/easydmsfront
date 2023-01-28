@@ -16,6 +16,10 @@ a{
     color: #cdda95;
     text-decoration: none;
 }
+img{
+    width:25%;
+    height:25%;
+}
 .container{
     margin: 20px;
     padding: 20px;
@@ -69,7 +73,7 @@ header{
 }
 
 .close-icon i{
-    font-size:60px;
+    font-size:65px;
     float: left;
     cursor: pointer;
     color: #0077b3;
@@ -85,6 +89,8 @@ header{
     background-color: #5acffa;
     height: 100%;
     position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .nav-item a{
@@ -110,11 +116,12 @@ header{
 }
 
 .bar-icon{
-    font-size: 60px;
+    font-size: 65px;
     display: inline-block;
     margin-right:10px;
     color: #0077b3;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 @media screen and (max-width: 460px){

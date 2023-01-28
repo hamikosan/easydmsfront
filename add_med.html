@@ -26,25 +26,33 @@
         </div>
         <form action="/form/submit" method="post" class="med-detail">
             
-            <div class="medname_input add-column">
-                <h3>Medicine Name</h3>
+            <div class="med_detail_input add-column">
+                <h3 id="medname">Medicine Name</h3>
                 <input type="text" id="medname_input" name="medname_input">
             </div>
             <div class="med_detail_input add-column">
                 <h3 id="dosage">Dosage form and strength</h3>
-                <textarea id="doname_input" name="doname_input" rows="12" cols="65"></textarea>
+                <input type="text" id="doname_input" name="doname_input">
+            </div>
+            <div class="med_detail_input add-column">
                 <h3 id="indication">Indication</h3>
-                <textarea id="ind_input" name="ind_input" rows="12" cols="65"></textarea>
+                <textarea id="ind_input" name="ind_input" rows="5" cols="65"></textarea>
             </div>
             <div class="med_detail_input add-column">
                 <h3 id="contraindication">Contraindication</h3>
-                <textarea id="cont_input" name="cont_input" rows="12" cols="65"></textarea>
+                <textarea id="cont_input" name="cont_input" rows="3" cols="65"></textarea>
+            </div>
+            <div class="med_detail_input add-column">
                 <h3 id="storage">Storage</h3>
-                <textarea id="sto_input" name="sto_input" rows="12" cols="65"></textarea>
+                <textarea id="sto_input" name="sto_input" rows="2" cols="65"></textarea>
             </div>
             <div class="med_detail_input add-column">
                 <h3 id="posad">Possible Adverse Reaction</h3>
-                <textarea id="pos_input" name="pos_input" rows="12" cols="65"></textarea>  
+                <textarea id="pos_input" name="pos_input" rows="3" cols="65"></textarea>
+            </div>
+            <div class="med_detail_input add-column">
+                <h3 id="exp">Expiration Date</h3>
+                <input type="text" id="exp_input" name="exp_input">
             </div>
             <div class="med_category_select add-column">
                 <h3>Category</h3>
@@ -53,8 +61,7 @@
                     <option value="general">General Medicine</option>
                 </select>
             </div>
-            <input style="width: 200px;" type="submit" class="addmed_button" id="addmed" value="Add Medicine">
-               
+            <input style="width: 200px;" type="submit" class="addmed_button" id="addmed" value="Add Medicine">         
         </form>
     <script src="main.js"></script>
 </body>
