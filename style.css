@@ -12,6 +12,10 @@ h1{
     font-size: 16px;
     font-weight: border;
 }
+h4{
+    font-size: 65px;
+    margin: 0;
+}
 a{
     color: #cdda95;
     text-decoration: none;

@@ -10,13 +10,14 @@
 </head>
 <body>
     <header>
-        <div class="navbar" id="navb"> 
+        <div class="navbar" id="navb">  
             <script>
                 $.get("navbar.html", function(data){
                     $("#navb").append(data);
+                    $("#navb").append('<h4 style="margin-left: 300px;">ADR Report</h4>');
                 });
             </script>
-        </div>
+        </div> 
     </header>
     <div class="container">
         <div class ="filter-variable">
