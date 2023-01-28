@@ -36,7 +36,7 @@ img{
 }
 .subnews-row{
     display: grid;
-    grid-template-columns: 5% 6% 69% 20%;
+    grid-template-columns:  6% 64% 20% 10%;
 }
 .search_button_row{
     display: flex;
@@ -50,6 +50,7 @@ img{
     padding: 8px;
     margin: 2px;
 }
+
 .subnews-column{
     padding: 10px;
     margin: 4px;
@@ -61,9 +62,13 @@ img{
     justify-content: center;
     align-items: center;
 }
+.subnews-edit{
+    background-color: #9ee9ff;
+}
 .subnews-edit i{
     font-size: 45px;
     margin-left: 9px;
+    color: #0077b3;
 }
 input.forchecksize{
     width: 40px;
@@ -81,9 +86,7 @@ input.forchecksize{
         padding: 10px;
     }
     .subnews-row{
-        display: grid;
-        grid-template-columns: 25% 75%;
-        grid-template-rows: 65% 35%;
+        display: block;
     }
     input.forchecksize{
         width: 30px;
@@ -106,15 +109,18 @@ input.forchecksize{
         padding: 15px;
     }
     .subnews-row{
-        display: grid;
-        grid-template-columns: 6% 6% 68% 20%;
+        display: block;
     }
     input.forchecksize{
         width: 20px;
         height: 20px;
     }
+    .subnews-edit{
+        text-align: center;
+    }
     .subnews-edit i{
         font-size: 35px;
+        
     }
     html{
         font-size: 14px;
@@ -310,9 +316,7 @@ header{
 }
 @media screen and (max-width: 460px){
     .add_row{
-        display: grid;
-        grid-template-columns: 55% 45%;
-        grid-template-rows: 15% 50%;
+        display: block;
         
     }
     .add_row h3{
@@ -328,6 +332,20 @@ header{
         width: 30px;
         height: 30px;
     }
+}
+@media screen and (min-width: 460px) and (Max-width: 1024px){
+    .add_row{
+        display: block;
+        margin-left: 106px;
+    }
+    .news_title_input input{
+        width: 80%;
+    }
+    .page_add_button{
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    
 }
 /*writing page*/
 .prewriting{
@@ -393,7 +411,14 @@ header{
     margin-top: 80px;
     margin-left: 500px;
 }
+@media screen and (min-width: 460px) and (Max-width: 1024px){
 
+    .page_add_button{
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    
+}
 /*page number*/
 
 .pagination {
@@ -464,4 +489,45 @@ header{
     border-radius: 7px;
     border-style: none;
     box-shadow:1px 2px 3px #0077b3;
+}
+/*enable disable button*/
+.radio-visual {
+    color: #cdda95;
+    background: #567764;
+    border-radius: 4px;
+    display: flex;
+    padding: 5px;
+}
+.radio-visual label {
+    border-radius: 2px;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: .2s all ease-in-out;
+    width: 80px;
+}
+.radio-visual input[type="radio"] {
+    display: none;
+}
+.radio-visual input[type="radio"]:checked + label {
+    background: #709e84;
+    border-radius: 4px;
+}
+.visibility-set{
+    margin-top: 15px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 15px;  
+    align-self: center
+}
+@media screen and (min-width: 460px) and (Max-width: 1024px){
+    .radio-visual{
+        width: fit-content;
+        
+    }
+    .visibility-set{
+        margin-left: 120px;
+    }
 }

@@ -35,7 +35,7 @@ img{
 }
 .submed-row{
     display: grid;
-    grid-template-columns: 5% 6% 69% 20%;
+    grid-template-columns: 6% 64% 20% 10%;
 }
 .search_button_row{
     display: flex;
@@ -60,9 +60,13 @@ img{
     justify-content: center;
     align-items: center;
 }
+.submed-edit{
+    background-color: #9ee9ff;
+}
 .submed-edit i{
     font-size: 45px;
     margin-left: 9px;
+    color: #0077b3;
 }
 input.forchecksize{
     width: 40px;
@@ -80,9 +84,7 @@ input.forchecksize{
         padding: 10px;
     }
     .submed-row{
-        display: grid;
-        grid-template-columns: 25% 75%;
-        grid-template-rows: 65% 35%;
+        display: block;
     }
     input.forchecksize{
         width: 30px;
@@ -90,6 +92,7 @@ input.forchecksize{
     }
     .submed-edit i{
         font-size: 35px;
+        
     }
     .med_category_devider{
         display: block;
@@ -105,15 +108,11 @@ input.forchecksize{
         padding: 15px;
     }
     .submed-row{
-        display: grid;
-        grid-template-columns: 6% 6% 68% 20%;
-    }
-    input.forchecksize{
-        width: 20px;
-        height: 20px;
+        display: block;
     }
     .submed-edit i{
         font-size: 35px;
+        
     }
     html{
         font-size: 14px;
@@ -279,48 +278,6 @@ header{
     background-color: #ddd;
     border-radius: 5px;
   }
-
-  /*confirm box*/
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    margin-top: 120px;
-    left:0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-  }
-  #delete_confirm {
-    background-color: #a4d5f6;
-    margin: auto;
-    padding: 20px;
-    border: 5px solid #0077b3;
-    box-shadow: 0 4px 8px 0 #0077b3,0 6px 10px 0 #0077b3;
-    width: 700px;
-    height: 300px;
-    display: block;
-  }
-  #delete_confirm h1{
-    color: #0077b3;
-    font-size: 30px;
-    text-align: center;
-  }
-  #delete_confirm button{
-    background-color: #0077b3;
-    color: #a4d5f6;
-    cursor: pointer;
-    width: 180px;
-    height: 40px;
-    font-size: 16px;
-    margin-top: 25px;
-    border-style: none;
-    border-radius: 7px;
-    margin-left: 95px;
-  }
-
   /*Adding section*/
   form{
     background-color: #a4d5f6;
@@ -399,10 +356,10 @@ header{
 #storage{
     margin-right: 445px;
 }
-/*.add-column{
+.add-column{
     padding: 10px;
     margin: 4px;
-}*/
+}
 .med-detail h3{
     color: #0077b3;
     margin: 0;
@@ -433,7 +390,27 @@ header{
     .med-detail input{
         height: 35px;
         width: 210px;
-    }  
+    } 
+    .submed-edit{
+        text-align: center;
+    } 
+}
+@media screen and (min-width: 460px) and (Max-width: 1024px){
+    .submed-row{
+        display: block;
+        margin-left: 2px;
+    }
+    .submed-row input{
+        width: 80%;
+    }
+    .submed-edit{
+        text-align: center;
+    }
+    .addmed_button{
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    
 }
 textarea{
     width: 500px;
@@ -454,3 +431,43 @@ textarea{
 .addmed_button,.upmed_button{
     margin-left: 39%;
   }
+/*disable enable*/
+  .radio-visual {
+    color: #cdda95;
+    background: #567764;
+    border-radius: 4px;
+    display: flex;
+    padding: 5px;
+}
+.radio-visual label {
+    border-radius: 2px;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: .2s all ease-in-out;
+    width: 80px;
+}
+.radio-visual input[type="radio"] {
+    display: none;
+}
+.radio-visual input[type="radio"]:checked + label {
+    background: #709e84;
+    border-radius: 4px;
+}
+.visibility-set{
+    margin-top: 15px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 15px;  
+    align-self: center
+}
+@media screen and (min-width: 460px) and (Max-width: 1024px){
+    .radio-visual{
+        width: fit-content;
+    }
+    .visibility-set{
+        margin-left: 120px;
+    }
+}

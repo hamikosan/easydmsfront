@@ -30,17 +30,11 @@
                 <div class="add_button search-column">
                     <button class="add_button"><a href =add_med.html>Add</a></button>
                 </div>
-                <div class="delete_button search-column">
-                    <button type="button" id="deleteB" onclick="deletePopUP()">Delete</button>
-                </div>
             </div>
             <div class="submed-title">
                 <h1>Adverse Drug Monitoring Program</h1>
             </div>
             <div class="submed-row">
-                <div class="submed-checkbox submed-column">
-                    <input type="checkbox" class="forchecksize" id="delete_check" name="delete_check" value="delete_check">
-                </div>
                 <div class="submed-edit submed-column">
                     <a href="edit_med.html"><i class="fa fa-pencil"></i></a>
                 </div>
@@ -53,6 +47,12 @@
                     <br>
                     on xx/xx/xx
                 </div>
+                <div class="radio-visual visibility-set">
+                    <input id="en-med"type="radio" name="ability1" value="enable" checked="">
+                    <label for="en-med" id="visible">Enable</label>
+                    <input id="disa-med"type="radio" name="ability2" value="disable" checked="">
+                    <label for="disa-med"id="invisible">Disable</label>
+                </div>
             </div>
             <hr class="med_category_devider">
             <!--News section-->
@@ -60,9 +60,6 @@
                 <h1>General Medicine</h1>
             </div>
             <div class="submed-row">
-                <div class="submed-checkbox submed-column">
-                    <input type="checkbox" class="forchecksize" id="delete_check" name="delete_check" value="delete_check">
-                </div>
                 <div class="submed-edit submed-column">
                     <a href="edit_med.html"><i class="fa fa-pencil"></i></a>
                 </div>
@@ -74,6 +71,12 @@
                     <b>Last update by <a href="">username</a></b> 
                     <br>
                     on xx/xx/xx
+                </div>
+                <div class="radio-visual visibility-set">
+                    <input id="en-med"type="radio" name="ability1" value="enable" checked="">
+                    <label for="en-med" id="visible">Enable</label>
+                    <input id="disa-med"type="radio" name="ability2" value="disable" checked="">
+                    <label for="disa-med"id="invisible">Disable</label>
                 </div>
             </div> 
             <div class="pagination">
@@ -87,13 +90,7 @@
                 <a href="#">&raquo;</a>
           </div>
         </div>   
-        <div class="modal" id="modal">
-            <div id="delete_confirm">
-                <h1>Are you sure <br> you want to delete data?</h1><br>
-                <button class="confirm_button" id="confirm_button" value="yes">Yes</button>
-                <button class="no_button" id="no_button" value="no">No</button>
-            </div> 
-        </div>  
+        
     </div>
     <script src="main.js"></script>
 </body>

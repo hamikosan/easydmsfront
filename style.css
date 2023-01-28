@@ -413,6 +413,34 @@ header{
     border-style: none;
     border-radius: 7px;
 }
+@media screen and (min-width: 460px) and (Max-width: 1024px){
+    .interactable-section{
+        margin-left: 50px;
+    }
+    #account-report{
+        width: 100%;
+    }
+    .add_head{
+        padding: 0px;
+        grid-template-columns: 38% 50%
+    }
+    .account-detail,.security-detail{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    .account-detail{
+        display: block;
+    }
+    .account-detail input,.security-detail input{
+        width: 320px;
+    }
+    .addacc_button, .upacc_button{
+        margin-left: 28%;
+        margin-right: 28%;
+    }
+    
+}
+
 /*confirm box*/
 .modal {
     display: none; /* Hidden by default */
