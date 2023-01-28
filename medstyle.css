@@ -280,7 +280,6 @@ header{
   }
   /*Adding section*/
   form{
-    background-color: #a4d5f6;
     margin-left: 300px; 
     margin-right: 300px; 
 }
@@ -406,11 +405,13 @@ header{
     .submed-edit{
         text-align: center;
     }
-    .addmed_button{
-        margin-top: 10px;
-        margin-left: 0;
+    form{
+        margin-left: 10%; 
+        margin-right: 10%; 
     }
-    
+    /*.addmed_button,.upmed_button{
+        margin-left: 0%;
+    }*/
 }
 textarea{
     width: 500px;
@@ -431,6 +432,13 @@ textarea{
 .addmed_button,.upmed_button{
     margin-left: 39%;
   }
+  @media screen and (min-width: 460px) and (Max-width: 1024px){
+    .addmed_button,.upmed_button{
+        margin-left: 32%;
+        margin-top: 20px;
+    }
+    
+}
 /*disable enable*/
   .radio-visual {
     color: #cdda95;
