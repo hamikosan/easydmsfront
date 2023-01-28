@@ -14,7 +14,7 @@
             <script>
                 $.get("navbar.html", function(data){
                     $("#navb").append(data);
-                    $("#navb").append('<h4 style="margin-left: 300px;">Unsend report list</h4>');
+                    $("#navb").append('<h4 id="track-header">Unsend report list</h4>');
                 });
             </script>
         </div>
@@ -24,7 +24,7 @@
             <h1 style="font-size: 24px;">People who not submit report</h1>
             <button class="check_export">Export Table</button>
         </div>
-        <div class="report-content">
+        <div class="unsend-content">
             <table id="unreceive-report" class="center" style="width: 750px;">
                 
                     <tr class="header">

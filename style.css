@@ -15,6 +15,7 @@ h1{
 h4{
     font-size: 65px;
     margin: 0;
+    margin-left: 200px;
 }
 a{
     color: #cdda95;
@@ -57,6 +58,12 @@ img{
     h1{
         font-size: 16px;
     }
+    h4{
+        font-size: 30px;
+    }
+    h4#track-header{
+        margin-left: 120px;
+    }
 }
 header{
     margin-inline: 10px;
@@ -65,7 +72,8 @@ header{
 .navbar{
     display:flex;
     align-items: center;
-    z-index:1;
+    position: relative;
+    z-index:4;
 }
 .navigation{
     padding: 10px;
@@ -145,8 +153,7 @@ header{
         padding: 5px;
     }
     
-    
-    .bar-icon{
+    .bar-icon,h4{
         font-size: 30px;
     }
  
@@ -245,6 +252,7 @@ header{
     .filter-variable{
         position: absolute;
         margin-left: 0px;
+        z-index: 1;
       }
     .meddropdown-content,.sypdropdown-content,.sevdropdown-content {
         width: 262px;    
@@ -270,7 +278,7 @@ header{
 #unreceive-report td{
     width: 300px;
 }
-.report-content{
+.unsend-content{
     margin-left: 200px;
     font-size: 20px;
 }
@@ -299,7 +307,7 @@ header{
     .report-check-row h1{
         margin-top: 0px;
     }
-    .report-content{
+    .unsend-content{
         margin-left: 40px;
         margin-right: 40px;
     }

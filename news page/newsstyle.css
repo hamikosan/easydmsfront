@@ -16,6 +16,7 @@ h4{
     font-size: 65px;
     margin: 0;
     color: #0077b3;
+    margin-left: 180px;
 }
 a{
     color: #cdda95;
@@ -131,6 +132,10 @@ input.forchecksize{
     }
     h1{
         font-size: 16px;
+    }
+    h4{
+        font-size: 30px;
+        margin-left: 120px;
     }
 }
 header{
