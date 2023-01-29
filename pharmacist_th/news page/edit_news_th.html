@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit News</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="newsstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="navbar" id="newsnav">
+            <script>
+                $.get("newsnavbar.html", function(data){
+                    $("#newsnav").append(data);
+                });
+            </script>
+        </div>
+    </header>
+    
+    <div class = "container">
+        <div class="add_head">
+            <a href="news_list_page.html" class="back-icon" id="backIcon"><i class="fa fa-arrow-left"></i></a>
+            <h1>Edit News</h1>
+        </div>
+        <div class="add_row">
+            <div class="news_title_input add-column">
+                <h3>Title</h3>
+                <input type="text" id="title_input" name="title_input">
+            </div>
+            <div class="news_category_select add-column">
+                <h3>Category</h3>
+                <select name="news_category" id="news_category">
+                    <option value="General">General Information</option>
+                    <option value="News">News</option>
+                </select>
+            </div>
+            <div class="link_check add-column">
+                <h3>Outside Link</h3>
+                <input type="checkbox" class="outsidelink" id="link_check" name="link_check" value="link_check" onclick="showOutSideLink()">
+            </div>
+        </div>
+        <div class="prewriting" id="prewriting">
+            <h3>News Details</h3>
+            <form>
+                <div id="froala"></div>
+                <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+                <script> var editor = new FroalaEditor('#froala');
+                </script>
+            </form>
+            <div class="add_page_button prewriting-column">
+                <button class="preview_button" id="preview" value="preview"><a href="news_preview.html">Preview</a></button>
+                <button class="page_update_button" id="update" value="update">Update</button>
+            </div>
+        </div>
+        <div class="outsidelink_form" id="outsidelink_form" style="display: none">
+            <h3>URL</h3>
+                <input type="text" id="outsidelinktext">
+            <h3>Short Description</h3>
+            <input type="text" id="link_desc"><br>
+            <button class="addurl_button" id="addurl" value="addurl">Add</button>
+        </div>
+    </div>
+    <script src="mainnews.js"></script>
+</body>
+</html>

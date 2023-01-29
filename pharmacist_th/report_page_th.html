@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADR Report</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar" id="navb">  
+            <script>
+                $.get("navbar.html", function(data){
+                    $("#navb").append(data);
+                    $("#navb").append('<h4 id="adr-header">ADR Report</h4>');
+                });
+            </script>
+        </div> 
+    </header>
+    <div class="container">
+        <div class ="filter-variable">
+            <div class="medicine_dropdown">
+                <div id="medDropdown" class="meddropdown-content">
+                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"><br>
+                    <h2>Medicine</h2>
+                    <input type="checkbox"><label>Medicine_name</label><br>
+                    <input type="checkbox"><label>Medicine_name</label><br>
+                    <input type="checkbox"><label>Medicine_name</label><br>
+                    <input type="checkbox"><label>Medicine_name</label><br>
+                    <input type="checkbox"><label>Medicine_name</label><br>
+                    <label>More</label><a href=""><i class="fa fa-sort-down"></i></a>
+                </div>
+            </div>
+            <div class="Symptom_dropdown">
+                <div id="sypDropdown" class="sypdropdown-content">
+                    <h2>Symptom</h2>
+                    <input type="checkbox"><label>Symptom</label><br>
+                    <input type="checkbox"><label>Symptom</label><br>
+                    <input type="checkbox"><label>Symptom</label><br>
+                    <input type="checkbox"><label>Symptom</label><br>
+                    <input type="checkbox"><label>Symptom</label><br>
+                    <label>More</label><a href=""><i class="fa fa-sort-down"></i></a>
+                </div>
+            </div>
+            <div class="severity_dropdown">
+                <div id="sevDropdown" class="sevdropdown-content">
+                    <h2>Severity Level</h2>
+                    <input type="checkbox"><label>severity_level</label><br>
+                    <input type="checkbox"><label>severity_level</label><br>
+                    <input type="checkbox"><label>severity_level</label><br>
+                    <input type="checkbox"><label>severity_level</label><br>
+                    <input type="checkbox"><label>severity_level</label><br>
+                    <label>More</label><a href=""><i class="fa fa-sort-down"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="report-content">
+            <table id="receive-report" class="center">
+                
+                    <tr class="header">
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Medicine</th>
+                        <th>Symptom 1</th>
+                        <th>Symptom 2</th>
+                        <th>Symptom 3</th>
+                        <th>Other Symptoms</th>
+                        <th>Phone Number</th>
+                    </tr>
+                
+                     <tr>
+                  <td>xx/xx/xx</td>
+                  <td>Patient Name</td>
+                  <td>Medicine_name</td>
+                  <td>Symptom 1</td>
+                  <td>Symptom 2</td>
+                  <td>Symptom 3</td>
+                  <td>Other Symptoms</td>
+                  <td>xxxxxxxxxx</td>
+                </tr>
+                <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                </tr>
+                <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                </tr>
+                <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                </tr>
+                <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr>
+                  <tr>
+                      <td>xx/xx/xx</td>
+                      <td>Patient Name</td>
+                      <td>Medicine_name</td>
+                      <td>Symptom 1</td>
+                      <td>Symptom 2</td>
+                      <td>Symptom 3</td>
+                      <td>Other Symptoms</td>
+                      <td>xxxxxxxxxx</td>
+                  </tr> 
+                  <tr>
+                    <td>xx/xx/xx</td>
+                    <td>Patient Name</td>
+                    <td>Medicine_name</td>
+                    <td>Symptom 1</td>
+                    <td>Symptom 2</td>
+                    <td>Symptom 3</td>
+                    <td>Other Symptoms</td>
+                    <td>xxxxxxxxxx</td>
+                </tr>
+                    <tr>
+                        <td>xx/xx/xx</td>
+                        <td>Patient Name</td>
+                        <td>Medicine_name</td>
+                        <td>Symptom 1</td>
+                        <td>Symptom 2</td>
+                        <td>Symptom 3</td>
+                        <td>Other Symptoms</td>
+                        <td>xxxxxxxxxx</td>
+                    </tr>
+                         
+              </table>
+        </div>
+        <div class="exporting">
+            <button>Export Table</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

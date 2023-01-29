@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview News</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="newsstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="navbar" id="newsnav">
+            <script>
+                $.get("newsnavbar.html", function(data){
+                    $("#newsnav").append(data);
+                });
+            </script>
+        </div>
+    </header>
+    
+    <div class = "container">
+        <div class="add_head">
+            <a href="news_list_page.html" class="back-icon" id="backIcon"><i class="fa fa-arrow-left"></i></a>
+            <h1>Preview News</h1>
+        </div>
+        <div class="previewing">
+            <textarea id="fromadd" name="fromadd" rows="100" cols="100">text/picture</textarea>
+        </div>
+    </div>
+    <script src="mainnews.js"></script>
+</body>
+</html>

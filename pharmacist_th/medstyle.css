@@ -1,0 +1,490 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #9ee9ff;
+    color: #f0eed7;
+}
+h1{
+    font-size: 16px;
+    font-weight: border;
+}
+h4{
+    font-size: 65px;
+    margin: 0;
+    color: #0077b3;
+    margin-left: 180px;
+}
+a{
+    color: #cdda95;
+    text-decoration: none;
+}
+img{
+    width:25%;
+    height:25%;
+}
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+.submed{
+    margin-top: 20px;
+}
+.submed-title{
+    background-color: #0077b3;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+}
+.submed-row{
+    display: grid;
+    grid-template-columns: 6% 64% 20% 10%;
+}
+.search_button_row{
+    display: flex;
+    justify-content: right;
+}
+.submed-description *{
+    margin-block: 0;
+}
+
+.search-column{
+    padding: 8px;
+    margin: 2px;
+}
+.submed-column{
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #567764;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submed-edit{
+    background-color: #9ee9ff;
+}
+.submed-edit i{
+    font-size: 45px;
+    margin-left: 9px;
+    color: #0077b3;
+}
+input.forchecksize{
+    width: 40px;
+    height: 40px;
+}
+.submed-checkbox{
+    background-color: #9ee9ff;
+}
+.med_category_devider{
+    display: none;
+}
+@media screen and (max-width: 460px){
+    .container{
+        margin: 10px;
+        padding: 10px;
+    }
+    .submed-row{
+        display: block;
+    }
+    input.forchecksize{
+        width: 30px;
+        height: 30px;
+    }
+    .submed-edit i{
+        font-size: 35px;
+        
+    }
+    .med_category_devider{
+        display: block;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, #cdda95, #9ee9ff, #0077b3);
+    }
+}
+
+@media screen and (min-width: 460px) and (Max-width: 1024px){
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }
+    .submed-row{
+        display: block;
+    }
+    .submed-edit i{
+        font-size: 35px;
+        
+    }
+    html{
+        font-size: 14px;
+    }
+    h1{
+        font-size: 16px;
+    }
+    h4{
+        font-size: 30px;
+        margin-left: 120px;
+    }
+}
+header{
+    margin-inline: 10px;
+}
+/*nav bar style*/
+.navbar{
+    display:flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.navigation{
+    width: 25%;
+    display: inline-block;
+    border-radius: 5px;
+    max-height: 80px;
+    margin-right:10px;
+}
+
+.close-icon i{
+    font-size:65px;
+    float: left;
+    cursor: pointer;
+    color: #0077b3;
+    width: 25%;
+}
+
+.nav-list{
+    list-style-type:none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #5acffa;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.nav-item a{
+    display:block;
+    text-align: center;
+    font-size: 20px;
+    padding: 8px 16px;
+    margin: 28px;
+    border-radius: 7px;
+    background-color: #9ee9ff;
+    color:#0077b3;
+}
+.nav-item a:hover{
+    background-color: #a4d5f6;
+}
+.active{
+    background-color: #0077b3;
+    color: #cdda95;
+}
+.hide{
+    display: none;
+}
+
+.bar-icon{
+    font-size: 65px;
+    display: inline-block;
+    margin-right:10px;
+    color: #0077b3;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 460px){
+    .navigation{
+        max-height: auto;
+    }
+    
+    .close-icon i{
+        font-size:30px;
+    }
+    
+    .nav-item a{
+        float:left;
+        display:inline;
+        margin-inline: 3px;
+        font-size: 10px;
+        padding: 5px;
+    }
+    
+    
+    .bar-icon{
+        font-size: 30px;
+    }
+ 
+}
+
+/*search section*/
+.search_button_row{
+    margin-top: 10px;
+    padding: 10px;
+    display:flex;
+    justify-content: right ;
+}
+
+
+.search_button_row input{
+    padding: 10px;
+    border-radius: 7px;
+}
+
+
+.search_button_row button{
+    padding: 10px;
+    width: 130px;
+    background-color:#567764;
+    color:#cdda95;
+    border-radius: 7px;
+}
+.search_button button{
+    width: fit-content;
+}
+.search_button_row button:hover{
+    background-color: #0077b3;
+    color: #a4d5f6;
+    cursor: pointer;
+}
+
+/* search box for smartphones */
+@media screen and (max-width: 460px){
+    .search_button_row{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 10%;
+    }    
+
+}
+/*page number*/
+
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #0077b3;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  /*Adding section*/
+  form{
+    margin-left: 300px; 
+    margin-right: 300px; 
+}
+  
+.add_head h1{
+    font-size: 30px;
+    color: #0077b3;
+    margin: 0;
+}
+.add_head{
+    margin-top: 10px;
+    padding: 10px;
+    display:grid;
+    grid-template-columns: 44% 50%
+}
+.back-icon{
+    color: #0077b3;
+    font-size: 30px;
+}
+
+.med-detail{
+    display:block;
+}
+
+.med-detail select{
+    padding: 10px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow:1px 2px 3px #0077b3;
+}
+.med_detail_input{
+    display: block;
+    text-align: center;
+}
+.med_category_select{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.med-detail input{
+    height: 35px;
+    width: 500px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow:1px 2px 3px #0077b3;
+    margin-bottom: 20px;
+}
+.med-detail textarea{
+    margin-bottom: 20px;
+}
+
+#exp{
+    margin-right: 391px;
+}
+#posad{
+    margin-right: 320px;
+}
+#dosage{
+    margin-right: 323px;
+}
+#medname{
+    margin-right: 390px;
+}
+#indication{
+    margin-right: 10px;
+}
+#contraindication{
+    margin-right: 385px;
+}
+#indication{
+    margin-right: 431px;
+}
+#storage{
+    margin-right: 445px;
+}
+.add-column{
+    padding: 10px;
+    margin: 4px;
+}
+.med-detail h3{
+    color: #0077b3;
+    margin: 0;
+}
+.addmed_button,.upmed_button{
+    background-color: #0077b3;
+    color: #a4d5f6;
+    cursor: pointer;
+    height: 40px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 7px;
+    margin-left: 630px;  
+    margin-top: 10px;
+}
+@media screen and (max-width: 460px){
+    .med-detail{
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows: 15% 50%;
+        
+    }
+    .med-detail h3{
+        color: #0077b3;
+        margin: 0;
+        margin-top: 50px;
+    }
+    .med-detail input{
+        height: 35px;
+        width: 210px;
+    } 
+    .submed-edit{
+        text-align: center;
+    } 
+}
+@media screen and (min-width: 460px) and (Max-width: 1024px){
+    .submed-row{
+        display: block;
+        margin-left: 2px;
+    }
+    .submed-row input{
+        width: 80%;
+    }
+    .submed-edit{
+        text-align: center;
+    }
+    form{
+        margin-left: 10%; 
+        margin-right: 10%; 
+    }
+    /*.addmed_button,.upmed_button{
+        margin-left: 0%;
+    }*/
+}
+textarea{
+    width: 500px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow:1px 2px 3px #0077b3;
+}
+.med_container button{
+    background-color: #0077b3;
+    color: #a4d5f6;
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 7px;
+}
+.addmed_button,.upmed_button{
+    margin-left: 39%;
+  }
+  @media screen and (min-width: 460px) and (Max-width: 1024px){
+    .addmed_button,.upmed_button{
+        margin-left: 32%;
+        margin-top: 20px;
+    }
+    
+}
+/*disable enable*/
+  .radio-visual {
+    color: #cdda95;
+    background: #567764;
+    border-radius: 4px;
+    display: flex;
+    padding: 5px;
+}
+.radio-visual label {
+    border-radius: 2px;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: .2s all ease-in-out;
+    width: 80px;
+}
+.radio-visual input[type="radio"] {
+    display: none;
+}
+.radio-visual input[type="radio"]:checked + label {
+    background: #709e84;
+    border-radius: 4px;
+}
+.visibility-set{
+    margin-top: 15px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 15px;  
+    align-self: center
+}
+@media screen and (min-width: 460px) and (Max-width: 1024px){
+    .radio-visual{
+        width: fit-content;
+    }
+    .visibility-set{
+        margin-left: 120px;
+    }
+}

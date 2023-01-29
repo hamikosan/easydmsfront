@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medcine list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="medstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar" id="navb"> 
+            <script>
+                $.get("navbar.html", function(data){
+                    $("#navb").append(data);
+                    $("#navb").append('<h4 id="medicine-header">Medicine Manager</h4>');
+                });
+            </script>
+        </div>
+    </header>
+    <div class="container">
+        <div class="submed"> 
+            <div class="search_button_row">
+                <div class="label search-column">
+                    <input type="text" id="searchkey" name="searchkey" placeholder="search">
+                </div>
+                <div class="search_button search-column">
+                    <button type="button"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="add_button search-column">
+                    <button class="add_button"><a href =add_med.html>Add</a></button>
+                </div>
+            </div>
+            <div class="submed-title">
+                <h1>Adverse Drug Monitoring Program</h1>
+            </div>
+            <div class="submed-row">
+                <div class="submed-edit submed-column">
+                    <a href="edit_med.html"><i class="fa fa-pencil"></i></a>
+                </div>
+                <div class ="submed-description submed-column">
+                    <h1><a href="">Medicine Name: </a></h1>
+                    <i><p>example content</p></i>
+                </div>
+                <div class="submed-log submed-column">
+                    <b>Last update by <a href="">username</a></b> 
+                    <br>
+                    on xx/xx/xx
+                </div>
+                <div class="radio-visual visibility-set">
+                    <input id="en-med"type="radio" name="visibility" value="enable" checked="">
+                    <label for="en-med" id="visible">Enable</label>
+                    <input id="disa-med"type="radio" name="visibility2" value="disable" checked="">
+                    <label for="disa-med"id="invisible">Disable</label>
+                </div>
+            </div>
+            <hr class="med_category_devider">
+            <!--News section-->
+            <div class="submed-title">
+                <h1>General Medicine</h1>
+            </div>
+            <div class="submed-row">
+                <div class="submed-edit submed-column">
+                    <a href="edit_med.html"><i class="fa fa-pencil"></i></a>
+                </div>
+                <div class ="submed-description submed-column">
+                    <h1><a href="">Medcine Name: </a></h1>
+                    <i><p>example content</p></i>
+                </div>
+                <div class="submed-log submed-column">
+                    <b>Last update by <a href="">username</a></b> 
+                    <br>
+                    on xx/xx/xx
+                </div>
+                <div class="radio-visual visibility-set">
+                    <input id="en-med"type="radio" name="visibility" value="enable" checked="">
+                    <label for="en-med" id="visible">Enable</label>
+                    <input id="disa-med"type="radio" name="visibility2" value="disable" checked="">
+                    <label for="disa-med"id="invisible">Disable</label>
+                </div>
+            </div> 
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+          </div>
+        </div>   
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

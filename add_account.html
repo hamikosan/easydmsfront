@@ -10,21 +10,12 @@
 </head>
 <body>
     <header>
-        <div class="navbar" id="newnav">
-            <nav class="navigation hide" id="navigation">
-                <a class="close-icon" id="close-icon"><i class="fa fa-close" ></i></a>
-                <ul class="nav-list">
-                    <span class="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span><br><br><br>
-                    <li class="nav-item"><a href="report_page.html"><i class="fa fa-clipboard"></i> ADR Report</a></li>
-                    <li class="nav-item"><a href="report_check_page.html"><i class="fa fa-exclamation-circle"></i> Unsend Report List</a></li>
-                    <li class="nav-item"><a href="news page/news_list_page.html"><i class="fa fa-newspaper-o"></i> News Manager</a></li>
-                    <li class="nav-item"><a href="account_manager_page.html"><i class="fa fa-user-circle"></i> Account Manager</a></li>
-                    <li class="nav-item"><a href="medicine_manage.html"><i class="fa fa-tags"></i> Medicine Manager</a></li>
-                    <li class="nav-item"><a href=""><i class="fa fa-mail-reply"></i> Logout</a></li>
-                </ul>
-            </nav>
-            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
-            <img src="image/logo.png" style="width:25%;height:25%;">
+        <div class="navbar" id="navb">  
+            <script>
+                $.get("navbar.html", function(data){
+                    $("#navb").append(data);
+                });
+            </script>
         </div>
     </header>
     

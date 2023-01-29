@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang ="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=TIS620" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แก้ไขข้อมูลของยา</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="medstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar" id="navb"> 
+            <script>
+                $.get("navbar_th.html", function(data){
+                    $("#navb").append(data);
+                });
+            </script>
+        </div>
+    </header>
+    
+    <div class = "med_container">
+        <div class="add_head">
+            <a href="medicine_manage.html" class="back-icon" id="backIcon"><i class="fa fa-arrow-left"></i></a>
+            <h1>หน้าแก้ไขข้อมูลของยา</h1>
+        </div>
+        <form action="/form/submit" method="post" class="med-detail">
+            
+            <div class="med_detail_input add-column">
+                <h3 id="medname">ชื่อยา</h3>
+                <input type="text" id="medname_input" name="medname_input">
+            </div>
+            <div class="med_detail_input add-column">
+                <h3 id="dosage">Dosage form and strength</h3>
+                <input type="text" id="doname_input" name="doname_input">
+            </div>
+            <div class="med_detail_input add-column">
+                <h3 id="indication">Indication</h3>
+                <textarea id="ind_input" name="ind_input" rows="5" cols="65"></textarea>
+            </div>
+            <div class="med_detail_input add-column">
+                <h3 id="contraindication">Contraindication</h3>
+                <textarea id="cont_input" name="cont_input" rows="3" cols="65"></textarea>
+            </div>
+            <div class="med_detail_input add-column">
+                <h3 id="storage">Storage</h3>
+                <textarea id="sto_input" name="sto_input" rows="2" cols="65"></textarea>
+            </div>
+            <div class="med_detail_input add-column">
+                <h3 id="posad">Possible Adverse Reaction</h3>
+                <textarea id="pos_input" name="pos_input" rows="3" cols="65"></textarea>
+            </div>
+            <div class="med_detail_input add-column">
+                <h3 id="exp">วันหมดอายุ</h3>
+                <input type="text" id="exp_input" name="exp_input">
+            </div>
+            <div class="med_category_select add-column">
+                <h3>หมวดหมู่ยา</h3>
+                <select name="med_category" id="med_category">
+                    <option value="adr">Adverse Drug Reaction Monitoring</option>
+                    <option value="general">General Medicine</option>
+                </select>
+            </div>
+            <input style="width: 200px;" type="submit" class="upmed_button" id="upmed" value="Update Medicine">
+               
+        </form>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="newsstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar" id="newsnav">
+            <script>
+                $.get("newsnavbar.html", function(data){
+                    $("#newsnav").append(data);
+                    $("#newsnav").append('<h4 id="news-header">News Manager</h4>');
+                });
+            </script>
+        </div>
+    </header>
+    <div class="container">
+        <div class="subnews"> 
+            <div class="search_button_row">
+                <div class="label search-column">
+                    <input type="text" id="searchkey" name="searchkey" placeholder="search">
+                </div>
+                <div class="search_button search-column">
+                    <button type="button"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="add_button search-column">
+                    <button class="add_button"><a href =add_news.html>Add</a></button>
+                </div>
+                <!--<div class="delete_button search-column">
+                    <button type="button" id="deleteB" onclick="deletePopUP()">Delete</button>
+                </div>-->
+            </div>
+            <div class="subnews-title">
+                <h1>General Information</h1>
+            </div>
+            <div class="subnews-row">
+                <!--<div class="subsnews-checkbox subnews-column">
+                    <input type="checkbox" class="forchecksize" id="delete_check" name="delete_check" value="delete_check">
+                </div>-->
+                
+                <div class="subnews-edit subnews-column">
+                    <a href="edit_news.html"><i class="fa fa-pencil"></i></a>
+                </div>
+                <div class ="subnews-description subnews-column">
+                    <h1><a href="">Title: </a></h1>
+                    <i><p>example content</p></i>
+                </div>
+                <div class="subnews-log subnews-column">
+                    <b>Last update by <a href="">username</a></b> 
+                    <br>
+                    on xx/xx/xx
+                </div>
+                <div class="radio-visual visibility-set">
+                    <input id="en-content"type="radio" name="ability" value="enable" checked="">
+                    <label for="en-content" id="visible">Enable</label>
+                    <input id="disa-content"type="radio" name="ability" value="disable" checked="">
+                    <label for="disa-content"id="invisible">Disable</label>
+                </div>
+            </div>
+            <hr class="news_category_devider">
+            <!--News section-->
+            <div class="subnews-title">
+                <h1>News</h1>
+            </div>
+            <div class="subnews-row">
+                <!--<div class="subsnews-checkbox subnews-column">
+                    <input type="checkbox" class="forchecksize" id="delete_check" name="delete_check" value="delete_check">
+                </div>-->
+                
+                <div class="subnews-edit subnews-column">
+                    <a href="edit_news.html"><i class="fa fa-pencil"></i></a>
+                </div>
+                <div class ="subnews-description subnews-column">
+                    <h1><a href="">Title: </a></h1>
+                    <i><p>example content</p></i>
+                </div>
+                <div class="subnews-log subnews-column">
+                    <b>Last update by <a href="">username</a></b> 
+                    <br>
+                    on xx/xx/xx
+                </div>
+                <div class="radio-visual visibility-set">
+                    <input id="en-ncontent"type="radio" name="ability2" value="enable" checked="">
+                    <label for="en-ncontent" id="visible">Enable</label>
+                    <input id="disa-ncontent"type="radio" name="ability2" value="disable" checked="">
+                    <label for="disa-ncontent"id="invisible">Disable</label>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+          </div>
+        <div class="modal" id="modal">
+            <div id="delete_confirm">
+                <h1>Are you sure <br> you want to delete data?</h1><br>
+                <button class="confirm_button" id="confirm_button" value="yes">Yes</button>
+                <button class="no_button" id="no_button" value="no">No</button>
+            </div> 
+        </div>  
+    </div>
+    <script src="mainnews.js"></script>
+</body>
+</html>
