@@ -22,7 +22,7 @@
     
     <div class = "med_container">
         <div class="add_head">
-            <a href="medicine_manage.html" class="back-icon" id="backIcon"><i class="fa fa-arrow-left"></i></a>
+            <a href="medicine_manage_th.html" class="back-icon" id="backIcon"><i class="fa fa-arrow-left"></i></a>
             <h1>เพิ่ม ยา</h1>
         </div>
         <form action="/form/submit" method="post" class="med-detail">
@@ -32,23 +32,23 @@
                 <input type="text" id="medname_input" name="medname_input">
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="dosage">Dosage form and strength</h3>
+                <h3 id="dosage">ชนิดของยา และ ขนาด</h3>
                 <input type="text" id="doname_input" name="doname_input">
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="indication">Indication</h3>
+                <h3 id="indication">ประโยชน์</h3>
                 <textarea id="ind_input" name="ind_input" rows="5" cols="65"></textarea>
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="contraindication">Contraindication</h3>
+                <h3 id="contraindication">ข้อควรระวัง</h3>
                 <textarea id="cont_input" name="cont_input" rows="3" cols="65"></textarea>
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="storage">Storage</h3>
+                <h3 id="storage">การเก็บรักษา</h3>
                 <textarea id="sto_input" name="sto_input" rows="2" cols="65"></textarea>
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="posad">Possible Adverse Reaction</h3>
+                <h3 id="posad">อาการไม่พึงประสงค์ที่อาจเกิดขึ้น</h3>
                 <textarea id="pos_input" name="pos_input" rows="3" cols="65"></textarea>
             </div>
             <div class="med_detail_input add-column">
@@ -58,8 +58,8 @@
             <div class="med_category_select add-column">
                 <h3>หมวดหมู่ยา</h3>
                 <select name="med_category" id="med_category">
-                    <option value="adr">Adverse Drug Reaction Monitoring</option>
-                    <option value="general">General Medicine</option>
+                    <option value="adr">ยาตัวใหม่ที่ต้องติดตามอาการ</option>
+                    <option value="general">ยาสามัญทั่วไป</option>
                 </select>
             </div>
             <input style="width: 200px;" type="submit" class="addmed_button" id="addmed" value="Add Medicine">         
