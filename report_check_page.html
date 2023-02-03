@@ -20,9 +20,46 @@
         </div>
     </header>
     <div class="container">
-        <div class="report-check-row">
-            <h1 style="font-size: 24px;">People who not submit report</h1>
-            <button class="check_export">Export Table</button>
+        <div class ="filter-variable">
+            <div class="medicine_dropdown">
+                <div id="medDropdown" class="meddropdown-content">
+                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"><br>
+                    <h2>Medicine</h2>
+                    <input type="checkbox"><label>Medicine_name</label><br>
+                    <input type="checkbox"><label>Medicine_name</label><br>
+                    <input type="checkbox"><label>Medicine_name</label><br>
+                    <input type="checkbox"><label>Medicine_name</label><br>
+                    <input type="checkbox"><label>Medicine_name</label><br>
+                    <label>More</label><a href=""><i class="fa fa-sort-down"></i></a>
+                </div>
+            </div>
+            <div class="Month_dropdown">
+                <div id="monDropdown" class="mondropdown-content">
+                    <h2>Month</h2>
+                    <select name="Month" id="month_list">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">JUne</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+            </div>
+            <input id='year' placeholder="YYYY" type='number' min='1990' max='2100'/>
+            <input type="date">
+            <input type="text" id="date">
+            <script type="text/javascript">
+                $(function() {
+                    $( "#date" ).datepicker({dateFormat: 'yy'});
+                });
+            </script>
         </div>
         <div class="unsend-content">
             <table id="unreceive-report" class="center" style="width: 750px;">
@@ -188,6 +225,9 @@
                         <td>xxxxxxxxxx</td>
                     </tr>  
               </table>
+        </div>
+        <div class="report-check-row">
+            <button class="check_export">Export Table</button>
         </div>
     </div>
     

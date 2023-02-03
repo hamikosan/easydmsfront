@@ -15,7 +15,7 @@ h1{
 h4{
     font-size: 65px;
     margin: 0;
-    margin-left: 200px;
+    margin-left: 100px;
 }
 a{
     color: #cdda95;
@@ -279,7 +279,7 @@ header{
     width: 300px;
 }
 .unsend-content{
-    margin-left: 200px;
+    margin-left: 20px;
     font-size: 20px;
 }
 .report-check-row h1{
@@ -294,10 +294,9 @@ header{
     width: 180px;
     height: 40px;
     font-size: 16px;
-    margin-top: 25px;
     border-style: none;
     border-radius: 7px;
-    margin-left: 180px;
+    margin-left: 20px;
 }
 @media screen and (min-width: 460px) and (Max-width: 1024px){
     .report-check-row button{

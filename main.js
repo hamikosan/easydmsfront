@@ -29,3 +29,16 @@ function deletePopUP(){
         }
     }
 }
+
+//image editor section
+var imgout=document.getElementById("imgout");
+var imgin=document.getElementById("imgin");
+var loadFile = function(event){
+    imgout.setAttribute("src",URL.createObjectURL(event.target.files[0]));  
+}
+var loadFileIn = function(event){
+    imgin.setAttribute("src",URL.createObjectURL(event.target.files[0]));
+}
+
+/*date filtering */
+document.querySelector("input[type=number]").oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))

@@ -289,8 +289,8 @@ header{
   }
   /*Adding section*/
   form{
-    margin-left: 300px; 
-    margin-right: 300px; 
+    margin-left: 500px; 
+    margin-right: 500px; 
 }
   
 .add_head h1{
@@ -313,19 +313,9 @@ header{
     display:block;
 }
 
-.med-detail select{
-    padding: 10px;
-    border-radius: 7px;
-    border-style: none;
-    box-shadow:1px 2px 3px #0077b3;
-}
-.med_detail_input{
+.med_detail_input,.med_photo_input,.med_submit_input,.med_photo_edit{
     display: block;
     text-align: center;
-}
-.med_category_select{
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .med-detail input{
@@ -339,31 +329,10 @@ header{
 .med-detail textarea{
     margin-bottom: 20px;
 }
+.med_detail_input h3{
+    text-align: left;
+}
 
-#exp{
-    margin-right: 391px;
-}
-#posad{
-    margin-right: 320px;
-}
-#dosage{
-    margin-right: 323px;
-}
-#medname{
-    margin-right: 390px;
-}
-#indication{
-    margin-right: 10px;
-}
-#contraindication{
-    margin-right: 385px;
-}
-#indication{
-    margin-right: 431px;
-}
-#storage{
-    margin-right: 445px;
-}
 .add-column{
     padding: 10px;
     margin: 4px;
@@ -372,6 +341,12 @@ header{
     color: #0077b3;
     margin: 0;
 }
+.med-detail label{
+    color: #0077b3;
+    font-size: 16px;
+    
+}
+
 .addmed_button,.upmed_button{
     background-color: #0077b3;
     color: #a4d5f6;
@@ -380,8 +355,8 @@ header{
     font-size: 16px;
     border-style: none;
     border-radius: 7px;
-    margin-left: 630px;  
-    margin-top: 10px;
+    width: 200px; 
+    margin-top: 30px;
 }
 @media screen and (max-width: 460px){
     .med-detail{
@@ -418,9 +393,6 @@ header{
         margin-left: 10%; 
         margin-right: 10%; 
     }
-    /*.addmed_button,.upmed_button{
-        margin-left: 0%;
-    }*/
 }
 textarea{
     width: 500px;
@@ -438,16 +410,7 @@ textarea{
     border-style: none;
     border-radius: 7px;
 }
-.addmed_button,.upmed_button{
-    margin-left: 39%;
-  }
-  @media screen and (min-width: 460px) and (Max-width: 1024px){
-    .addmed_button,.upmed_button{
-        margin-left: 32%;
-        margin-top: 20px;
-    }
-    
-}
+
 /*disable enable*/
   .radio-visual {
     color: #cdda95;
@@ -488,3 +451,20 @@ textarea{
         margin-left: 120px;
     }
 }
+/*image editor section*/
+#med_pic{ 
+    width: 100%;
+}
+.med_photo_edit img, .med_photo_input img{
+    margin-top: 10px;
+    width: 50%;
+    height: 50%;
+}
+.med_photo_edit i, .med_photo_input i{
+  display: block;
+  color: #0077b3;
+  font-size: 16px;
+  text-align: center;
+}
+
+	

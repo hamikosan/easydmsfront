@@ -31,8 +31,12 @@
                 <input type="text" id="medname_input" name="medname_input">
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="dosage">Dosage form and strength</h3>
+                <h3 id="dosage">Dosage form</h3>
                 <input type="text" id="doname_input" name="doname_input">
+            </div>
+            <div class="med_detail_input add-column">
+                <h3 id="strength">Strength</h3>
+                <input type="text" id="str_input" name="str_input">
             </div>
             <div class="med_detail_input add-column">
                 <h3 id="indication">Indication</h3>
@@ -50,18 +54,16 @@
                 <h3 id="posad">Possible Adverse Reaction</h3>
                 <textarea id="pos_input" name="pos_input" rows="3" cols="65"></textarea>
             </div>
-            <div class="med_detail_input add-column">
-                <h3 id="exp">Expiration Date</h3>
-                <input type="text" id="exp_input" name="exp_input">
+            <div class="med_photo_input">             
+                <h3>Upload Image</h3>
+                <input type="file" accept="image/*" name="image" id="imginfile" style="display: none;" onchange="loadFileIn(event)">
+                <label for="imginfile"><i class="fa fa-file-photo-o"></i></label>
+                <img id="imgin">    
             </div>
-            <div class="med_category_select add-column">
-                <h3>Category</h3>
-                <select name="med_category" id="med_category">
-                    <option value="adr">Adverse Drug Reaction Monitoring</option>
-                    <option value="general">General Medicine</option>
-                </select>
-            </div>
-            <input style="width: 200px;" type="submit" class="addmed_button" id="addmed" value="Add Medicine">         
+            <div class="med_submit_input">
+                <button class="addmed_button" id="addmed" value="Add Medicine">Add Medcine</button>  
+            </div> 
+                  
         </form>
     <script src="main.js"></script>
 </body>
