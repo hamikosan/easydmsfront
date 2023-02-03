@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unsend Report List</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -23,7 +24,7 @@
         <div class ="filter-variable">
             <div class="medicine_dropdown">
                 <div id="medDropdown" class="meddropdown-content">
-                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"><br>
+                    <input type="text" placeholder="Search.." id="myInput2" onkeyup="filterFunction()"><br>
                     <h2>Medicine</h2>
                     <input type="checkbox"><label>Medicine_name</label><br>
                     <input type="checkbox"><label>Medicine_name</label><br>
@@ -52,14 +53,13 @@
                     </select>
                 </div>
             </div>
-            <input id='year' placeholder="YYYY" type='number' min='1990' max='2100'/>
-            <input type="date">
-            <input type="text" id="date">
-            <script type="text/javascript">
-                $(function() {
-                    $( "#date" ).datepicker({dateFormat: 'yy'});
-                });
-            </script>
+            <div class="year-content">
+                <div class="year_options">
+                   <h2>Year</h2>
+                <input id='year' placeholder="YYYY" type='number' min='1990' max='2100'/>
+                </div>    
+            </div>
+           
         </div>
         <div class="unsend-content">
             <table id="unreceive-report" class="center" style="width: 750px;">

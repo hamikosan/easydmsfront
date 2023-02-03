@@ -161,7 +161,7 @@ header{
 
 /*report page searching filtering*/
 /* The search field */
-#myInput {
+#myInput,#myInput2 {
     box-sizing: border-box;
     background-image: url('searchicon.png');
     background-position: 14px 12px;
@@ -173,22 +173,32 @@ header{
   }
   
   /* The search field when it gets focus/clicked on */
-  #myInput:focus {outline: 3px solid #ddd;}
+  #myInput:focus,#myInput2:focus {outline: 3px solid #ddd;}
   
   /* The container <div> - needed to position the dropdown content */
   .container {
     display: flex;
   }
-  .meddropdown, .sypdropdown,.sevdropdown{
+  #meddropdown, #sypdropdown,#sevdropdown,.Month_dropdown{
     position: relative;
     display: inline-block;
   }
   /* Dropdown Content (Hidden by Default) */
-  .meddropdown-content,.sypdropdown-content,.sevdropdown-content {
+  .meddropdown-content,.sypdropdown-content,.sevdropdown-content,.mondropdown-content,.year_options {
     display: block;
     background-color: #f6f6f6;
     min-width: 230px;
     border: 1px solid #ddd;
+  }
+  .meddropdown-content h2,.sypdropdown-content h2,.sevdropdown-content h2,.mondropdown-content h2,.year_options h2{
+    margin-left: 10px;
+  }
+  
+  .meddropdown-content input[type="checkbox"],.sypdropdown-content input,.sevdropdown-content input,.year_options input{
+    margin-left: 20px;
+  }
+  .meddropdown-content label,.sypdropdown-content label,.sevdropdown-content label{
+    margin-left: 20px;
   }
   /* Links inside the dropdown */
   .meddropdown-content a,.sypdropdown-content a, .sevdropdown-content a{
@@ -492,5 +502,20 @@ header{
     border-radius: 7px;
     margin-left: 95px;
   }
-
-  
+/*month year sort filter section*/
+#monDropdown select{  
+    padding: 10px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow:1px 2px 3px #0077b3;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.year_options input{
+    width: 107px;
+    padding: 10px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow:1px 2px 3px #0077b3;
+    margin-bottom: 20px;
+}  

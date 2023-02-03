@@ -41,4 +41,4 @@ var loadFileIn = function(event){
 }
 
 /*date filtering */
-document.querySelector("input[type=number]").oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
+document.querySelector("input[type=number]").oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1));
