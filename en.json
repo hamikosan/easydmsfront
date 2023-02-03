@@ -1,0 +1,9 @@
+{
+    "login_title": "Admin Login",
+    "username":"Username",
+    "password":"Password",
+    "forget_passh":"Forgot Password",
+    "forget_passq":"Forgot Password?",
+    "login":"Login",
+    "forget_inst":"Enter your registered username to reset your password."
+}
