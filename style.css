@@ -179,7 +179,7 @@ header{
   .container {
     display: flex;
   }
-  #meddropdown, #sypdropdown,#sevdropdown,.Month_dropdown{
+  #meddropdown, #sypdropdown,#sevdropdown{
     position: relative;
     display: inline-block;
   }

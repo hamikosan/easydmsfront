@@ -42,3 +42,9 @@ var loadFileIn = function(event){
 
 /*date filtering */
 document.querySelector("input[type=number]").oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1));
+
+const date = new Date();
+
+let year = date.getFullYear();
+var year_def= document.getElementById("year");
+year_def.setAttribute("value",year);
