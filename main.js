@@ -205,4 +205,4 @@ $(document).ready(function(){
     $('h4#account-header').text(language.accManage);
     $('h4#news-header').text(language.newsHead);
      });
-//document.getElementById("med").innerHTML=localStorage.getItem('language'); 
+

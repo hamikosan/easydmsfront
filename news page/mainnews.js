@@ -12,9 +12,9 @@ function showIconBar(){
     iconBar.setAttribute("style", "display:block;");
     navigation.classList.add("hide");
 }
-new FroalaEditor('div#froala-editor', {
+/*new FroalaEditor('div#froala-editor', {
     documentReady: true
-  })
+  })*/
 
 function showOutSideLink() {
     var checkBox = document.getElementById("link_check");
@@ -110,5 +110,41 @@ $(() => {
 
     const markup = "";
   
-  
-  
+  /*language setting*/
+    var language;
+ 
+    function getLanguage() {
+        (localStorage.getItem('language') == null) ? setLanguage('en') : false;
+        $.ajax({ 
+        url:  localStorage.getItem('language') + '.json', 
+        dataType: 'json', async: false, dataType: 'json', 
+        success: function (lang) { language = lang } });  
+    }
+    //var lan = localStorage.getItem('language')+'.json';
+    
+    //const en=JSON.parse(lan);
+    function setLanguage(lang) {
+        localStorage.setItem('language', lang);
+    }
+    //console.log(en.med);
+    getLanguage();
+    $(document).ready(function(){
+
+        $('#adr-header').text(language.adr_reportHead);
+        $('#track-header').text(language.unsendHead);
+        $('#medicine-header').text(language.medHead);
+        $('#account-header').text(language.accManage);
+        $('#news-header').text(language.newsHead);
+        $('#logout').text(language.logout);
+        $('h4#news-header').text(language.newsHead);
+        $('#searchkey').attr("placeholder",language.searchPlaceholder);
+        $('#add').text(language.add);
+        $('#general').text(language.general);
+        $('div#lastUp').text(language.lastUp);
+        $('div#on').text(language.onDate);
+        $('#news').text(language.news);
+        $('label#en').text(language.enable);
+        $('label#dis').text(language.disable);
+         });
+    //document.getElementById("med").innerHTML=localStorage.getItem('language'); 
+    

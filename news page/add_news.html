@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="newsstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/22.2.3/css/dx.light.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
     
     <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
@@ -23,6 +24,7 @@
             <script>
                 $.get("newsnavbar.html", function(data){
                     $("#newsnav").append(data);
+                    $("#navb").append(`<div class="language_flag"><a href="" onclick="setLanguage('en')"><span class="fi fi-us flags"></span></a><a href="" onclick="setLanguage('th')"><span class="fi fi-th flags"></span></a></div>`);
                 });
             </script>
         </div>

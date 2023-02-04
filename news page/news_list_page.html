@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="newsstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
 </head>
 <body>
     <header>
@@ -14,7 +15,8 @@
             <script>
                 $.get("newsnavbar.html", function(data){
                     $("#newsnav").append(data);
-                    $("#newsnav").append('<h4 id="news-header">News Manager</h4>');
+                    $("#newsnav").append('<h4 id="news-header"></h4>');
+                    $("#newsnav").append(`<div class="language_flag"><a href="" onclick="setLanguage('en')"><span class="fi fi-us flags"></span></a><a href="" onclick="setLanguage('th')"><span class="fi fi-th flags"></span></a></div>`);
                 });
             </script>
         </div>
@@ -23,22 +25,22 @@
         <div class="subnews"> 
             <div class="search_button_row">
                 <div class="label search-column">
-                    <input type="text" id="searchkey" name="searchkey" placeholder="search">
+                    <input type="text" id="searchkey" name="searchkey">
                 </div>
                 <div class="search_button search-column">
                     <button type="button"><i class="fa fa-search"></i></button>
                 </div>
                 <div class="add_button search-column">
-                    <button class="add_button"><a href =add_news.html>Add</a></button>
+                    <button id="add" class="add_button" onclick="location.href='add_news.html'"></button>
                 </div>
                 <!--<div class="delete_button search-column">
                     <button type="button" id="deleteB" onclick="deletePopUP()">Delete</button>
                 </div>-->
             </div>
             <div class="subnews-title">
-                <h1>General Information</h1>
+                <h1 id="general">General Information</h1>
             </div>
-            <div class="subnews-row">
+            <div id="general_section"class="subnews-row">
                 <!--<div class="subsnews-checkbox subnews-column">
                     <input type="checkbox" class="forchecksize" id="delete_check" name="delete_check" value="delete_check">
                 </div>-->
@@ -50,24 +52,27 @@
                     <h1><a href="">Title: </a></h1>
                     <i><p>example content</p></i>
                 </div>
-                <div class="subnews-log subnews-column">
-                    <b>Last update by <a href="">username</a></b> 
-                    <br>
-                    on xx/xx/xx
+                <div class="subnews-log subnews-column general_up">
+                    <div style="display: flex;"><div id="lastUp" style="font-weight:bold;"></div>
+                    <div class="newsusern" style="font-weight:bold;">username</div></div>
+                    <div style="display: flex;">
+                        <div id="on"></div>
+                        <div class="updateDate">xx/xx/xx</div>
+                    </div>
                 </div>
                 <div class="radio-visual visibility-set">
                     <input id="en-content"type="radio" name="ability" value="enable" checked="">
-                    <label for="en-content" id="visible">Enable</label>
+                    <label id="en"for="en-content" id="visible"></label>
                     <input id="disa-content"type="radio" name="ability" value="disable" checked="">
-                    <label for="disa-content"id="invisible">Disable</label>
+                    <label id="dis"for="disa-content"id="invisible"></label>
                 </div>
             </div>
             <hr class="news_category_devider">
             <!--News section-->
             <div class="subnews-title">
-                <h1>News</h1>
+                <h1 id="news"></h1>
             </div>
-            <div class="subnews-row">
+            <div id="news-section" class="subnews-row">
                 <!--<div class="subsnews-checkbox subnews-column">
                     <input type="checkbox" class="forchecksize" id="delete_check" name="delete_check" value="delete_check">
                 </div>-->
@@ -79,16 +84,20 @@
                     <h1><a href="">Title: </a></h1>
                     <i><p>example content</p></i>
                 </div>
-                <div class="subnews-log subnews-column">
-                    <b>Last update by <a href="">username</a></b> 
-                    <br>
-                    on xx/xx/xx
+                <div class="subnews-log subnews-column news-up">
+
+                    <div style="display: flex;"><div id="lastUp" style="font-weight:bold;"></div>
+                    <div class="newsusern" style="font-weight:bold;">username</div></div>
+                    <div style="display: flex;">
+                        <div id="on"></div>
+                        <div class="updateDate">xx/xx/xx</div>
+                    </div>
                 </div>
                 <div class="radio-visual visibility-set">
                     <input id="en-ncontent"type="radio" name="ability2" value="enable" checked="">
-                    <label for="en-ncontent" id="visible">Enable</label>
+                    <label id="en"for="en-ncontent" id="visible"></label>
                     <input id="disa-ncontent"type="radio" name="ability2" value="disable" checked="">
-                    <label for="disa-ncontent"id="invisible">Disable</label>
+                    <label id="dis"for="disa-ncontent"id="invisible"></label>
                 </div>
             </div>
         </div>

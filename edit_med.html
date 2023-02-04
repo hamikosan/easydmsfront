@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="medstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
 </head>
 <body>
     <header>
@@ -14,6 +15,7 @@
             <script>
                 $.get("navbar.html", function(data){
                     $("#navb").append(data);
+                    $("#navb").append(`<div class="language_flag"><a href="" onclick="setLanguage('en')"><span class="fi fi-us flags"></span></a><a href="" onclick="setLanguage('th')"><span class="fi fi-th flags"></span></a></div>`);
                 });
             </script>
         </div>
