@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "flag-icon-css": "^4.1.7",
+    "flag-icons": "^6.6.6",
     "froala-editor": "^4.0.16"
   }
 }

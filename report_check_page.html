@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unsend Report List</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
 </head>
 <body>
     <header>
@@ -15,7 +15,8 @@
             <script>
                 $.get("navbar.html", function(data){
                     $("#navb").append(data);
-                    $("#navb").append('<h4 id="track-header">Unsend report list</h4>');
+                    $("#navb").append('<h4 id="track-header"></h4>');
+                    $("#navb").append(`<div class="language_flag"><a href="" onclick="setLanguage('en')"><span class="fi fi-us flags"></span></a><a href="" onclick="setLanguage('th')"><span class="fi fi-th flags"></span></a></div>`);
                 });
             </script>
         </div>
@@ -24,38 +25,38 @@
         <div class ="filter-variable">
             <div class="medicine_dropdown">
                 <div id="medDropdown" class="meddropdown-content">
-                    <input type="text" placeholder="Search.." id="myInput2" onkeyup="filterFunction()"><br>
-                    <h2>Medicine</h2>
+                    <input type="text" id="myInput2" onkeyup="filterFunction()"><br>
+                    <h2 id="med"></h2>
                     <input type="checkbox"><label>Medicine_name</label><br>
                     <input type="checkbox"><label>Medicine_name</label><br>
                     <input type="checkbox"><label>Medicine_name</label><br>
                     <input type="checkbox"><label>Medicine_name</label><br>
                     <input type="checkbox"><label>Medicine_name</label><br>
-                    <label>More</label><a href=""><i class="fa fa-sort-down"></i></a>
+                    <label id="more"></label><a href=""><i class="fa fa-sort-down"></i></a>
                 </div>
             </div>
             <div class="Month_dropdown">
                 <div id="monDropdown" class="mondropdown-content">
-                    <h2>Month</h2>
+                    <h2 id="mon"></h2>
                     <select name="Month" id="month_list">
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
-                        <option value="5">May</option>
-                        <option value="6">JUne</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
+                        <option id="m1" value="1"></option>
+                        <option id="m2" value="2"></option>
+                        <option id="m3" value="3"></option>
+                        <option id="m4" value="4"></option>
+                        <option id="m5" value="5"></option>
+                        <option id="m6" value="6"></option>
+                        <option id="m7" value="7"></option>
+                        <option id="m8" value="8"></option>
+                        <option id="m9" value="9"></option>
+                        <option id="m10" value="10"></option>
+                        <option id="m11" value="11"></option>
+                        <option id="m12" value="12"></option>
                     </select>
                 </div>
             </div>
             <div class="year-content">
                 <div class="year_options">
-                   <h2>Year</h2>
+                   <h2 id="yearh"></h2>
                 <input id='year' placeholder="YYYY" type='number' min='1990' max='2100' value=""/>
                 </div>    
             </div>
@@ -65,9 +66,9 @@
             <table id="unreceive-report" class="center">
                 
                     <tr class="header">
-                        <th>Name</th>
-                        <th>Medicine</th>
-                        <th>Phone Number</th>
+                        <th id="name"></th>
+                        <th id="med"></th>
+                        <th id="tel"></th>
                     </tr>
                      <tr>
                         <td>Patient Name</td>
@@ -227,7 +228,7 @@
               </table>
         </div>
         <div class="report-check-row">
-            <button class="check_export" onclick="exportUnsendReportData()">Export Table</button>
+            <button id="c-export" class="check_export" onclick="exportUnsendReportData()"></button>
         </div>
     </div>
     

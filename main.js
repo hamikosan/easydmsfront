@@ -1,3 +1,4 @@
+
 function hideIconBar(){
     var iconBar = document.getElementById("iconBar");
     var navigation = document.getElementById("navigation");
@@ -142,3 +143,66 @@ function exportUnsendReportData(){
          /* download the data file named "Stock_Price_Report.csv" */
         link.click();
 }
+
+//select language
+var language;
+ 
+function getLanguage() {
+    (localStorage.getItem('language') == null) ? setLanguage('en') : false;
+    $.ajax({ 
+    url:  localStorage.getItem('language') + '.json', 
+    dataType: 'json', async: false, dataType: 'json', 
+    success: function (lang) { language = lang } });  
+}
+//var lan = localStorage.getItem('language')+'.json';
+
+//const en=JSON.parse(lan);
+function setLanguage(lang) {
+    localStorage.setItem('language', lang);
+}
+//console.log(en.med);
+getLanguage();
+$(document).ready(function(){
+    $('#med').text(language.med);
+    $('th#med').text(language.med);
+    $('#more').text(language.more);
+    $('#myInput').attr("placeholder",language.searchPlaceholder);
+    $('#myInput2').attr("placeholder",language.searchPlaceholder);
+    $('#symp').text(language.sympDrop);
+    $('#sevl').text(language.sevDrop);
+    $('#mon').text(language.month);
+    $('#m1').text(language.january);
+    $('#m2').text(language.february);
+    $('#m3').text(language.march);
+    $('#m4').text(language.april);
+    $('#m5').text(language.may);
+    $('#m6').text(language.june);
+    $('#m7').text(language.july);
+    $('#m8').text(language.august);
+    $('#m9').text(language.september);
+    $('#m10').text(language.october);
+    $('#m11').text(language.november);
+    $('#m12').text(language.december);
+    $('#yearh').text(language.year);
+    $('#adr-header').text(language.adr_reportHead);
+    $('#date').text(language.date);
+    $('#name').text(language.name);
+    $('#sym1').text(language.sympDrop+" "+1);
+    $('#sym2').text(language.sympDrop+" "+2);
+    $('#sym3').text(language.sympDrop+" "+3);
+    $('#osym').text(language.othSymp);
+    $('#tel').text(language.tel);
+    $('#n-export').text(language.exportTab);
+    $('#c-export').text(language.exportTab);
+    $('#track-header').text(language.unsendHead);
+    $('#medicine-header').text(language.medHead);
+    $('#account-header').text(language.accManage);
+    $('#news-header').text(language.newsHead);
+    $('#logout').text(language.logout);
+    $('h4#adr-header').text(language.adr_reportHead);
+    $('h4#track-header').text(language.unsendHead);
+    $('h4#medicine-header').text(language.medHead);
+    $('h4#account-header').text(language.accManage);
+    $('h4#news-header').text(language.newsHead);
+     });
+//document.getElementById("med").innerHTML=localStorage.getItem('language'); 

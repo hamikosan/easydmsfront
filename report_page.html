@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
 </head>
 <body>
     <header>
@@ -14,28 +15,30 @@
             <script>
                 $.get("navbar.html", function(data){
                     $("#navb").append(data);
-                    $("#navb").append('<h4 id="adr-header">ADR Report</h4>');
+                    $("#navb").append('<h4 id="adr-header"></h4>');
+                    $("#navb").append(`<div class="language_flag"><a href="" onclick="setLanguage('en')"><span class="fi fi-us flags"></span></a><a href="" onclick="setLanguage('th')"><span class="fi fi-th flags"></span></a></div>`);
                 });
             </script>
         </div> 
     </header>
     <div class="container">
+    
         <div class ="filter-variable">
             <div class="medicine_dropdown">
                 <div id="medDropdown" class="meddropdown-content">
-                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"><br>
-                    <h2>Medicine</h2>
+                    <input type="text" id="myInput" onkeyup="filterFunction()"><br>
+                    <h2 id="med"></h2>
                     <input type="checkbox"><label>Medicine_name</label><br>
                     <input type="checkbox"><label>Medicine_name</label><br>
                     <input type="checkbox"><label>Medicine_name</label><br>
                     <input type="checkbox"><label>Medicine_name</label><br>
                     <input type="checkbox"><label>Medicine_name</label><br>
-                    <label>More</label><a href=""><i class="fa fa-sort-down"></i></a>
+                    <label id="more"></label><a href=""><i class="fa fa-sort-down"></i></a>
                 </div>
             </div>
             <div class="Symptom_dropdown">
                 <div id="sypDropdown" class="sypdropdown-content">
-                    <h2>Symptom</h2>
+                    <h2 id="symp"></h2>
                     <input type="checkbox"><label>Symptom</label><br>
                     <input type="checkbox"><label>Symptom</label><br>
                     <input type="checkbox"><label>Symptom</label><br>
@@ -46,7 +49,7 @@
             </div>
             <div class="severity_dropdown">
                 <div id="sevDropdown" class="sevdropdown-content">
-                    <h2>Severity Level</h2>
+                    <h2 id="sevl"></h2>
                     <input type="checkbox"><label>severity_level</label><br>
                     <input type="checkbox"><label>severity_level</label><br>
                     <input type="checkbox"><label>severity_level</label><br>
@@ -57,26 +60,26 @@
             </div>
             <div class="Month_dropdown">
                 <div id="monDropdown" class="mondropdown-content">
-                    <h2>Month</h2>
+                    <h2 id="mon"></h2>
                     <select name="Month" id="month_list">
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
-                        <option value="5">May</option>
-                        <option value="6">JUne</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
+                        <option id="m1" value="1"></option>
+                        <option id="m2" value="2"></option>
+                        <option id="m3" value="3"></option>
+                        <option id="m4" value="4"></option>
+                        <option id="m5" value="5"></option>
+                        <option id="m6" value="6"></option>
+                        <option id="m7" value="7"></option>
+                        <option id="m8" value="8"></option>
+                        <option id="m9" value="9"></option>
+                        <option id="m10" value="10"></option>
+                        <option id="m11" value="11"></option>
+                        <option id="m12" value="12"></option>
                     </select>
                 </div>
             </div>
             <div class="year-content">
                 <div class="year_options">
-                   <h2>Year</h2>
+                   <h2 id="yearh"></h2>
                 <input id='year' placeholder="YYYY" type='number' min='1990' max='2100'value=""/>
                 </div>    
             </div>
@@ -85,14 +88,14 @@
             <table id="receive-report" class="center">
                 
                     <tr class="header">
-                        <th>Date</th>
-                        <th>Name</th>
-                        <th>Medicine</th>
-                        <th>Symptom 1</th>
-                        <th>Symptom 2</th>
-                        <th>Symptom 3</th>
-                        <th>Other Symptoms</th>
-                        <th>Phone Number</th>
+                        <th id="date"></th>
+                        <th id="name"></th>
+                        <th id="med"></th>
+                        <th id="sym1"></th>
+                        <th id="sym2"></th>
+                        <th id="sym3"></th>
+                        <th id="osym"></th>
+                        <th id="tel"></th>
                     </tr>
                 
                      <tr>
@@ -429,7 +432,7 @@
               </table>
         </div>
         <div class="exporting">
-            <button onclick="exportReportData()">Export Table</button>
+            <button id="n-export"onclick="exportReportData()">Export Table</button>
         </div>
     </div>
     <script src="main.js"></script>
