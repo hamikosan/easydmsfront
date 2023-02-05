@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
 </head>
 <body>
     <header>
@@ -14,6 +15,7 @@
             <script>
                 $.get("navbar.html", function(data){
                     $("#navb").append(data);
+                    $("#navb").append(`<div class="language_flag"><a href="" onclick="setLanguage('en')"><span class="fi fi-us flags"></span></a><a href="" onclick="setLanguage('th')"><span class="fi fi-th flags"></span></a></div>`);
                 });
             </script>
         </div>
@@ -22,43 +24,43 @@
     <div class = "acc_container">
         <div class="add_head">
             <a href="account_manager_page.html" class="back-icon" id="backIcon"><i class="fa fa-arrow-left"></i></a>
-            <h1>Edit Account</h1>
+            <h1 id="editAcc"></h1>
         </div>
         <div class="account-detail">
             <div class="account_detail_input add-column">
-                <h3>First Name</h3>
+                <h3 id="first_name"></h3>
                 <input type="text" id="fname_input" name="fname_input">
             </div>
             <div class="account_detail_input add-column">
-                <h3>Last Name</h3>
+                <h3 id="last_name"></h3>
                 <input type="text" id="lname_input" name="lname_input">
             </div>
             <div class="account_detail_input add-column">
-                <h3>Phone Number</h3>
+                <h3 id="tel"></h3>
                 <input type="text" id="pn_input" name="pn_input">
             </div>
         
         
             <div class="account_detail_input add-column">
-                <h3>Username</h3>
+                <h3 id="uname"></h3>
                 <input type="text" id="uname_input" name="uname_input">
             </div>
             <div class="account_detail_input add-column">
-                <h3>Password</h3>
+                <h3 id="pw"></h3>
                 <input type="text" id="pw_input" name="pw_input">
             </div>
             <div class="account_detail_input add-column">
-                <h3>Confirm Password</h3>
+                <h3 id="conPw"></h3>
                 <input type="text" id="cpw_input" name="cpw_input">
             </div>
         </div>
         <div class="security-detail">    
             <div class="account_detail_input add-column">
-                <h3>Professional License Number</h3>
+                <h3 id="pro"></h3>
                 <input type="text" id="license_no" name="license_no">
             </div>
     
-            <button class="upacc_button" id="upacc" value="upacc">Update</button>
+            <button class="upacc_button" id="upacc" value="upacc"></button>
         </div>
                
     </div>

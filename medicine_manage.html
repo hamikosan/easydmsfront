@@ -25,17 +25,17 @@
         <div class="submed"> 
             <div class="search_button_row">
                 <div class="label search-column">
-                    <input type="text" id="searchkey" name="searchkey" placeholder="search">
+                    <input type="text" id="searchkey" name="searchkey">
                 </div>
                 <div class="search_button search-column">
                     <button type="button"><i class="fa fa-search"></i></button>
                 </div>
                 <div class="add_button search-column">
-                    <button class="add_button"><a href =add_med.html>Add</a></button>
+                    <button id="add"class="add_button" onclick="location.href='add_med.html'"></button>
                 </div>
             </div>
             <div class="submed-title">
-                <h1>Adverse Drug Monitoring Program</h1>
+                <h1 id="drug_program"></h1>
             </div>
             <div class="submed-row">
                 <div class="submed-edit submed-column">
@@ -46,15 +46,18 @@
                     <i><p>example content</p></i>
                 </div>
                 <div class="submed-log submed-column">
-                    <b>Last update by <a href="">username</a></b> 
-                    <br>
-                    on xx/xx/xx
+                    <div style="display: flex;"><div id="lastUp" style="font-weight:bold;"></div>
+                    <div class="medusern" style="font-weight:bold;">username</div></div>
+                    <div style="display: flex;">
+                        <div id="on"></div>
+                        <div class="updateDate">xx/xx/xx</div>
+                    </div>
                 </div>
                 <div class="radio-visual visibility-set">
                     <input id="en-med"type="radio" name="visibility" value="enable" checked="">
-                    <label for="en-med" id="visible">Enable</label>
+                    <label id="en"for="en-med" id="visible"></label>
                     <input id="disa-med"type="radio" name="visibility" value="disable" checked="">
-                    <label for="disa-med"id="invisible">Disable</label>
+                    <label id="dis"for="disa-med"id="invisible"></label>
                 </div>
             </div>
             <hr class="med_category_devider">
