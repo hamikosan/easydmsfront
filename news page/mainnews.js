@@ -158,5 +158,4 @@ $(() => {
       $('button#preview').html("<a href='news_preview.html'>"+language.preview+"</a>");
       $('#previewNews').text(language.preview+" "+language.news);
         });
-    //document.getElementById("med").innerHTML=localStorage.getItem('language'); 
     
