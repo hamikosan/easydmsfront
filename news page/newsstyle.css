@@ -384,13 +384,13 @@ header{
     display: flex;
     justify-content: left;
 }
-.add_page_button a{
+.add_page_button a,.addurl_page_button a{
     color: #a4d5f6;
 }
 .page_add_button,.page_update_button,.page_addurl_button{
     margin-left: 15px;
 }
-.add_page_button button{
+.add_page_button button,.addurl_page_button button{
     background-color: #0077b3;
     color: #a4d5f6;
     cursor: pointer;
@@ -437,11 +437,13 @@ header{
 }
 @media screen and (min-width: 460px) and (Max-width: 1024px){
 
-    .page_add_button{
-        margin-top: 10px;
-        margin-left: 0;
+    .page_add_button,.page_addurl_button{
+        margin-top: 0px;
+        margin-right: 20%; 
     }
-    
+    #outsidelinktext,#link_desc{
+        width: 80%;
+    }
 }
 /*page number*/
 
