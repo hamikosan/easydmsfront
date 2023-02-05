@@ -24,50 +24,50 @@
     <div class = "med_container">
         <div class="add_head">
             <a href="medicine_manage.html" class="back-icon" id="backIcon"><i class="fa fa-arrow-left"></i></a>
-            <h1>Edit Medicine</h1>
+            <h1 id="editMedH"></h1>
         </div>
         <form action="/form/submit" method="post" class="med-detail">
             
             <div class="med_detail_input add-column">
-                <h3 id="medname">Medicine Name</h3>
+                <h3 id="medname"></h3>
                 <input type="text" id="medname_input" name="medname_input">
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="medname">Medicine Name</h3>
+                <h3 id="medmarname"></h3>
                 <input type="text" id="medname_input" name="medname_input">
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="dosage">Dosage form</h3>
+                <h3 id="dosage"></h3>
                 <input type="text" id="doname_input" name="doname_input">
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="strength">Strength</h3>
+                <h3 id="strength"></h3>
                 <input type="text" id="str_input" name="str_input">
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="indication">Indication</h3>
+                <h3 id="indication"></h3>
                 <textarea id="ind_input" name="ind_input" rows="5" cols="65"></textarea>
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="contraindication">Contraindication</h3>
+                <h3 id="contraindication"></h3>
                 <textarea id="cont_input" name="cont_input" rows="3" cols="65"></textarea>
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="storage">Storage</h3>
+                <h3 id="storage"></h3>
                 <textarea id="sto_input" name="sto_input" rows="2" cols="65"></textarea>
             </div>
             <div class="med_detail_input add-column">
-                <h3 id="posad">Possible Adverse Reaction</h3>
+                <h3 id="posad"></h3>
                 <textarea id="pos_input" name="pos_input" rows="3" cols="65"></textarea>
             </div>
             <div class="med_photo_edit" id="med_pic">
-                <h3>Edit Image</h3>
+                <h3 id="editImg"></h3>
                 <input type="file" accept="image/*" name="image" id="imgfile" style="display: none;" onchange="loadFile(event)">
                 <label for="imgfile"><i class="fa fa-edit"></i></label>
                 <img id="imgout">
             </div>
             <div class="med_submit_input">
-                <input style="width: 200px;" type="submit" class="upmed_button" id="upmed" value="Update Medicine">
+                <input style="width: 200px;" type="submit" class="upmed_button" id="upmed">
             </div>             
         </form>
     <script src="main.js"></script>

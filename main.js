@@ -229,10 +229,23 @@ $(document).ready(function(){
     $('#addacc').text(language.add);
     $('#upacc').text(language.update);
     $('#addMedH').text(language.add+" "+language.med);
+    $('#addmed').text(language.add+" "+language.med);
+    $('#editMedH').text(language.edit+" "+language.med);
+    $('#upmed').attr("value",language.update+" "+language.med);
     $('#drug_program').text(language.adrp);
     $('div#lastUp').text(language.lastUp);
     $('div#on').text(language.onDate);
     $('label#en').text(language.enable);
     $('label#dis').text(language.disable);
+    $('#medname').text(language.medGeneralName);
+    $('#medmarname').text(language.medMarket);
+    $('#dosage').text(language.dosageForm);
+    $('#strength').text(language.str);
+    $('#indication').text(language.ind);
+    $('#contraindication').text(language.contraindication);
+    $('#storage').text(language.storage);
+    $('#posad').text(language.par);
+    $('#upImg').text(language.upload+" "+language.image);
+    $('#editImg').text(language.edit+" "+language.image);
      });
 
