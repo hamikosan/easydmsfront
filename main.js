@@ -265,3 +265,56 @@ $(document).ready(function(){
     $('#reset-inst').text(language.reset_inst);
      });
 
+/*sort filter function*/
+function filterFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+  /*show hide password*/
+  /*$(".toggle-password").click(function() {
+
+    $(this).toggleClass("fa fa-eye");
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+      input.attr("type", "text");
+    } else {
+      input.attr("type", "password");
+    }
+  });*/
+
+
+
+$(".field-icon").click(function() {
+
+    if ($(this).hasClass("fa fa-eye-slash")) {  //check the class
+        $(this).removeClass( "fa fa-eye-slash" ).addClass( "fa fa-eye" );
+    }else if($(this).hasClass("fa fa-eye")){
+        $(this).removeClass( "fa fa-eye " ).addClass( "fa fa-eye-slash" );
+    }
+    
+    
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+    input.attr("type", "text");
+    } else {
+    input.attr("type", "password");
+    }
+});
+
