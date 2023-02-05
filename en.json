@@ -86,5 +86,6 @@
     "upload":"Upload",
     "image":"Image",
     "medGeneralName":"Medicine Generic Name",
-    "medMarket":"Medicine Brand Name"
+    "medMarket":"Medicine Brand Name",
+    "multiline":"Multiline toolbar"
 }

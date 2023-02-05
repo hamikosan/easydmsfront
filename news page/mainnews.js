@@ -47,7 +47,24 @@ function deletePopUP(){
             confirmbox.style.display = "none";
         }
     }
-}
+}/*language setting*/
+  var language;
+
+  function getLanguage() {
+      (localStorage.getItem('language') == null) ? setLanguage('en') : false;
+      $.ajax({ 
+      url:  localStorage.getItem('language') + '.json', 
+      dataType: 'json', async: false, dataType: 'json', 
+      success: function (lang) { language = lang } });  
+  }
+  //var lan = localStorage.getItem('language')+'.json';
+  
+  //const en=JSON.parse(lan);
+  function setLanguage(lang) {
+      localStorage.setItem('language', lang);
+  }
+  //console.log(en.med);
+  
 //html editor
 $(() => {
     const editor = $('.html-editor').dxHtmlEditor({
@@ -87,9 +104,9 @@ $(() => {
         enabled: true,
       },
     }).dxHtmlEditor('instance');
-  
+     
     $('#multiline').dxCheckBox({
-      text: 'Multiline toolbar',
+      text:language.imgUpTab,
       value: true,
       onValueChanged(e) {
         editor.option('toolbar.multiline', e.value);
@@ -110,41 +127,34 @@ $(() => {
 
     const markup = "";
   
-  /*language setting*/
-    var language;
- 
-    function getLanguage() {
-        (localStorage.getItem('language') == null) ? setLanguage('en') : false;
-        $.ajax({ 
-        url:  localStorage.getItem('language') + '.json', 
-        dataType: 'json', async: false, dataType: 'json', 
-        success: function (lang) { language = lang } });  
-    }
-    //var lan = localStorage.getItem('language')+'.json';
-    
-    //const en=JSON.parse(lan);
-    function setLanguage(lang) {
-        localStorage.setItem('language', lang);
-    }
-    //console.log(en.med);
     getLanguage();
-    $(document).ready(function(){
+  $(document).ready(function(){
 
-        $('#adr-header').text(language.adr_reportHead);
-        $('#track-header').text(language.unsendHead);
-        $('#medicine-header').text(language.medHead);
-        $('#account-header').text(language.accManage);
-        $('#news-header').text(language.newsHead);
-        $('#logout').text(language.logout);
-        $('h4#news-header').text(language.newsHead);
-        $('#searchkey').attr("placeholder",language.searchPlaceholder);
-        $('#add').text(language.add);
-        $('#general').text(language.general);
-        $('div#lastUp').text(language.lastUp);
-        $('div#on').text(language.onDate);
-        $('#news').text(language.news);
-        $('label#en').text(language.enable);
-        $('label#dis').text(language.disable);
-         });
+      $('#adr-header').text(language.adr_reportHead);
+      $('#track-header').text(language.unsendHead);
+      $('#medicine-header').text(language.medHead);
+      $('#account-header').text(language.accManage);
+      $('#news-header').text(language.newsHead);
+      $('#logout').text(language.logout);
+      $('h4#news-header').text(language.newsHead);
+      $('#searchkey').attr("placeholder",language.searchPlaceholder);
+      $('button#add').text(language.add);
+      $('#general').text(language.general);
+      $('div#lastUp').text(language.lastUp);
+      $('div#on').text(language.onDate);
+      $('#news').text(language.news);
+      $('label#en').text(language.enable);
+      $('label#dis').text(language.disable);
+      $('#addNews').text(language.add+" "+language.news);
+      $('#title').text(language.title);
+      $('#category').text(language.category);
+      $('#outLink').text(language.outLink);
+      $('#newsDetail').text(language.newsDetail);
+      $('button#preview').text(language.preview);
+      $('#options').text(language.options);
+      $('#s-desc').text(language.shortDesc);
+      $('#iut').text(language.imgUpTab);
+      $('#multi').text(language.multiline);
+        });
     //document.getElementById("med").innerHTML=localStorage.getItem('language'); 
     

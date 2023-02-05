@@ -83,5 +83,6 @@
     "upload":"อัปโหลด",
     "image":"รูปภาพ",
     "medGeneralName":"ชื่อสามัญ",
-    "medMarket":"ชื่อการค้า"
+    "medMarket":"ชื่อการค้า",
+    "multiline":"ช่องเครื่องมือหลายบรรทัด"
 }
