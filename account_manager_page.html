@@ -25,27 +25,27 @@
     <div class="container">
         <div class="interactable-section">
             <div class="search-account">
-                <input type="text" id="searchacc" name="searchacc" placeholder="search">
+                <input type="text" id="searchacc" name="searchacc">
             </div>
-            <button id="add_acc" value="add_acc"><a href="add_account.html">Add Account</a></button>
-            <button id="del_acc" value="del_acc" onclick="deletePopUP()">Disable Account</button>
+            <button id="add_acc" value="add_acc"></button>
+            <button id="dis_acc" value="del_acc" onclick="deletePopUP()"></button>
         </div>
         <div class="account-content">
-            <h2>*Admin account does not included.</h2>
+            <h2 id="adWarn"></h2>
             <table class="center" id="account-report" >   
                     <tr class="header">
-                        <th><input type="checkbox" id="delete_acc" value="delete_acc"></th>
-                        <th style="width:220px;">Name</th>
-                        <th style="width:220px;">Username</th>
-                        <th style="width:220px;">Password</th>
-                        <th style="width:220px;">Phone Number</th>
-                        <th style="width:220px;">License Number</th>
-                        <th style="width:220px;">Status</th>
-                        <th class="account-edit">Edit</th>
+                        <th><input type="checkbox" id="dis_acc" value="dis_acc"></th>
+                        <th id="name" style="width:220px;"></th>
+                        <th id="uname" style="width:220px;"></th>
+                        <th id="pw"style="width:220px;"></th>
+                        <th id="tel"style="width:220px;"></th>
+                        <th id="pro"style="width:220px;"></th>
+                        <th id="status"style="width:220px;"></th>
+                        <th id="edit"class="account-edit"></th>
                     </tr>
                      <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -54,8 +54,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -64,8 +64,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -74,8 +74,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -84,8 +84,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -94,8 +94,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -104,8 +104,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -114,8 +114,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -124,8 +124,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -134,8 +134,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -144,8 +144,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -154,8 +154,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -164,8 +164,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -174,8 +174,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -184,8 +184,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -194,17 +194,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
-                        <td>Username</td>
-                        <td>Password</td>
-                        <td>xxx-xxx-xxxx</td>
-                        <td>xxxxxxxxxxxxxx</td>
-                        <td>enable</td>
-                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
-                    </tr><tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -213,17 +204,8 @@
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
-                        <td>Username</td>
-                        <td>Password</td>
-                        <td>xxx-xxx-xxxx</td>
-                        <td>xxxxxxxxxxxxxx</td>
-                        <td>enable</td>
-                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
-                    </tr><tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
+                        <td><input type="checkbox" id="dis_acc" value="dis_acc"></td>
+                        <td>Pharmacist Name</td>
                         <td>Username</td>
                         <td>Password</td>
                         <td>xxx-xxx-xxxx</td>
@@ -231,24 +213,15 @@
                         <td>enable</td>
                         <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
                     </tr>
-                    <tr>
-                        <td><input type="checkbox" id="delete_acc" value="delete_acc"></td>
-                        <td>Patient Name</td>
-                        <td>Username</td>
-                        <td>Password</td>
-                        <td>xxx-xxx-xxxx</td>
-                        <td>xxxxxxxxxxxxxx</td>
-                        <td>enable</td>
-                        <td><a href="edit_account.html"><i class="fa fa-pencil"></i></a></td>
-                    </tr>
+
               </table>
         </div>
     </div>
     <div class="modal" id="modal">
-        <div id="delete_confirm">
-            <h1>Are you sure <br> you want to disable data?</h1><br>
-            <button class="confirm_button" id="confirm_button" value="yes">Yes</button>
-            <button class="no_button" id="no_button" value="no">No</button>
+        <div id="dis_confirm">
+            <h1 id="dis_confirm_text"></h1><br>
+            <button class="confirm_button" id="confirm_button" value="yes"></button>
+            <button class="no_button" id="no_button" value="no"></button>
         </div> 
     </div>  
     <script src="main.js"></script>

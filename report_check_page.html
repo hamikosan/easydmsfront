@@ -60,7 +60,15 @@
                 <input id='year' placeholder="YYYY" type='number' min='1990' max='2100' value=""/>
                 </div>    
             </div>
-           
+           <script>
+                document.querySelector("input[type=number]").oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1));
+
+                const date = new Date();
+
+                let year = date.getFullYear();
+                var year_def= document.getElementById("year");
+                year_def.setAttribute("value",year);
+           </script>
         </div>
         <div class="unsend-content">
             <table id="unreceive-report" class="center">

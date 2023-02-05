@@ -14,7 +14,7 @@ function showIconBar(){
 }
 function deletePopUP(){
     var confirmbox = document.getElementById("modal");
-    var btn = document.getElementById("del_acc");
+    var btn = document.getElementById("dis_acc");
     var close = document.getElementById("no_button");
     btn.onclick = function() {
         confirmbox.style.display = "block";
@@ -42,13 +42,13 @@ var loadFileIn = function(event){
 }
 
 /*date filtering */
-document.querySelector("input[type=number]").oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1));
+/*document.querySelector("input[type=number]").oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1));
 
 const date = new Date();
 
 let year = date.getFullYear();
 var year_def= document.getElementById("year");
-year_def.setAttribute("value",year);
+year_def.setAttribute("value",year);*/
 
 /*Export table*/
 function exportReportData(){
@@ -186,7 +186,12 @@ $(document).ready(function(){
     $('#yearh').text(language.year);
     $('#adr-header').text(language.adr_reportHead);
     $('#date').text(language.date);
-    $('#name').text(language.name);
+    $('th#name').text(language.name);
+    $('th#uname').text(language.username);
+    $('th#pw').text(language.password);
+    $('th#pro').text(language.license);
+    $('th#edit').text(language.edit);
+    $('th#status').text(language.status);
     $('#sym1').text(language.sympDrop+" "+1);
     $('#sym2').text(language.sympDrop+" "+2);
     $('#sym3').text(language.sympDrop+" "+3);
@@ -204,5 +209,12 @@ $(document).ready(function(){
     $('h4#medicine-header').text(language.medHead);
     $('h4#account-header').text(language.accManage);
     $('h4#news-header').text(language.newsHead);
+    $('button#add_acc').html("<a href='add_account.html'>"+language.add+" "+language.acc+"</a>");
+    $('button#dis_acc').text(language.disable+" "+language.acc);
+    $('#searchacc').attr("placeholder",language.searchPlaceholder);
+    $('#adWarn').text(language.adminAccAvailability);
+    $('#dis_confirm_text').html(language.rUSure+"<br>"+language.wantToDisable);
+    $('button#confirm_button').text(language.yes);
+    $('button#no_button').text(language.no);
      });
 
