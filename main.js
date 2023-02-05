@@ -224,8 +224,13 @@ $(document).ready(function(){
     $('#last_name').text(language.last);
     $('#uname').text(language.username);
     $('#pw').text(language.password);
+    $('#log-u').text(language.username);
+    $('#pw-u').text(language.password);
+    $('#reset-u').text(language.username);
     $('#pro').text(language.license);
+    $('#new-pw').text(language.password);
     $('#conPw').text(language.confirm+" "+language.password);
+    $('#con-new-pw').text(language.confirm+" "+language.password);
     $('#addacc').text(language.add);
     $('#upacc').text(language.update);
     $('#addMedH').text(language.add+" "+language.med);
@@ -247,5 +252,16 @@ $(document).ready(function(){
     $('#posad').text(language.par);
     $('#upImg').text(language.upload+" "+language.image);
     $('#editImg').text(language.edit+" "+language.image);
+    $('#log-title').text(language.login_title);
+    $('#link-reset').text(language.forget_passq);
+    $('#forgot-title').text(language.forget_passh);
+    $('#log-sub').text(language.login);
+    $('#signin').text(language.signin);
+    $('#forgot-inst').text(language.forget_inst);
+    //$('#navigateToReset').html("<a href='reset_password.html'>"+language.reset_password+"</a>");
+    $('#navigateToReset').text(language.reset_password);
+    $('#resetpwButton').text(language.reset_password);
+    $('#reset-title').text(language.reset_password);
+    $('#reset-inst').text(language.reset_inst);
      });
 

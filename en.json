@@ -89,5 +89,6 @@
     "medMarket":"Medicine Brand Name",
     "multi":"Multiline toolbar",
     "ftd":"From This Device",
-    "ftw":"From the Web"
+    "ftw":"From the Web",
+    "reset_inst":"Enter your new password."
 }
