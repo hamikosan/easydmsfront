@@ -13,10 +13,12 @@
     <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/22.2.3/css/dx.light.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
     
+    
     <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="https://unpkg.com/devextreme-quill@1.5.18/dist/dx-quill.min.js"></script>
     <script src="https://cdn3.devexpress.com/jslib/22.2.3/js/dx.all.js"></script>
+    
 </head>
 <body>
     <header>
@@ -24,7 +26,7 @@
             <script>
                 $.get("newsnavbar.html", function(data){
                     $("#newsnav").append(data);
-                    $("#navb").append(`<div class="language_flag"><a href="" onclick="setLanguage('en')"><span class="fi fi-us flags"></span></a><a href="" onclick="setLanguage('th')"><span class="fi fi-th flags"></span></a></div>`);
+                    $("#newsnav").append(`<div class="language_flag"><a href="" onclick="setLanguage('en')"><span class="fi fi-us flags"></span></a><a href="" onclick="setLanguage('th')"><span class="fi fi-th flags"></span></a></div>`);
                 });
             </script>
         </div>
@@ -33,28 +35,28 @@
     <div class = "container">
         <div class="add_head">
             <a href="news_list_page.html" class="back-icon" id="backIcon"><i class="fa fa-arrow-left"></i></a>
-            <h1>Edit News</h1>
+            <h1 id="editNews"></h1>
         </div>
         <form>
             <div class="add_row">
                 <div class="news_title_input add-column">
-                    <h3>Title</h3>
+                    <h3 id="title"></h3>
                     <input type="text" id="title_input" name="title_input">
                 </div>
                 <div class="news_category_select add-column">
-                    <h3>Category</h3>
+                    <h3 id="category"></h3>
                     <select name="news_category" id="news_category">
-                        <option value="General">General Information</option>
-                        <option value="News">News</option>
+                        <option id="general"value="General"></option>
+                        <option id="news"value="News"></option>
                     </select>
                 </div>
                 <div class="link_check add-column">
-                    <h3>Outside Link</h3>
+                    <h3 id="outLink"></h3>
                     <input type="checkbox" class="outsidelink" id="link_check" name="link_check" value="link_check" onclick="showOutSideLink()">
                 </div>
             </div>
             <div class="prewriting" id="prewriting">
-                <h3>News Details</h3>
+                <h3 id="newsDetail"></h3>
                 
                     <!--<div id="froala"></div>
                             <script> var editor = new FroalaEditor('#froala');
@@ -65,19 +67,19 @@
                             <div class="html-editor">
                             </div>
                             <div class="options">
-                            <h3 style="font-size: 18px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: 550;">Options</h3>
+                                <h3 id="options"style="font-size: 18px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight: 550;"></h3>
                             <div class="option">
                                 <div id="multiline"></div>
                             </div>
                             <div class="option">
-                                <label>Image upload tabs:</label>
+                                <label id="iut"></label>
                                 <div id="image-uploader-tabs"></div>
                             </div>
                             </div>
                         </div>
                 
                 <div class="add_page_button prewriting-column">
-                    <button class="preview_button" id="preview" value="preview"><a href="news_preview.html">Preview</a></button>
+                    <button class="preview_button" id="preview" value="preview"></button>
                     <button class="page_update_button" id="update" value="update">Update</button>
                 </div>
             </div>
@@ -87,6 +89,7 @@
                 <input type="text" id="outsidelinktext">
             <h3>Short Description</h3>
             <input type="text" id="link_desc"><br>
+            <button class="preview_button" id="preview" value="preview"></button>
             <button class="page_update_button" id="update" value="update">Update</button>
         </div>
     </div>

@@ -106,7 +106,7 @@ $(() => {
     }).dxHtmlEditor('instance');
      
     $('#multiline').dxCheckBox({
-      text:language.imgUpTab,
+      text:language.multi,
       value: true,
       onValueChanged(e) {
         editor.option('toolbar.multiline', e.value);
@@ -123,11 +123,11 @@ $(() => {
       },
     });
   });
-  const tabs = [{ name: 'From This Device', value: ['file'] }, { name: 'From the Web', value: ['url'] }, { name: 'Both', value: ['file', 'url'] }];
+  getLanguage();
+  const tabs = [{ name: language.ftd, value: ['file'] }, { name: language.ftw, value: ['url'] }, { name: language.both, value: ['file', 'url'] }];
 
     const markup = "";
-  
-    getLanguage();
+   
   $(document).ready(function(){
 
       $('#adr-header').text(language.adr_reportHead);
@@ -146,15 +146,17 @@ $(() => {
       $('label#en').text(language.enable);
       $('label#dis').text(language.disable);
       $('#addNews').text(language.add+" "+language.news);
+      $('#editNews').text(language.edit+" "+language.news);
       $('#title').text(language.title);
       $('#category').text(language.category);
       $('#outLink').text(language.outLink);
       $('#newsDetail').text(language.newsDetail);
-      $('button#preview').text(language.preview);
       $('#options').text(language.options);
       $('#s-desc').text(language.shortDesc);
       $('#iut').text(language.imgUpTab);
-      $('#multi').text(language.multiline);
+      $('button#update').text(language.update);
+      $('button#preview').html("<a href='news_preview.html'>"+language.preview+"</a>");
+      $('#previewNews').text(language.preview+" "+language.news);
         });
     //document.getElementById("med").innerHTML=localStorage.getItem('language'); 
     

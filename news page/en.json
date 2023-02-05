@@ -86,5 +86,9 @@
     "upload":"Upload",
     "image":"Image",
     "medGeneralName":"Medicine Generic Name",
-    "medMarket":"Medicine Brand Name"
+    "medMarket":"Medicine Brand Name",
+    "multi":"Multiline toolbar",
+    "ftd":"From This Device",
+    "ftw":"From the Web",
+    "both":"Both"
 }

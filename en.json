@@ -87,5 +87,7 @@
     "image":"Image",
     "medGeneralName":"Medicine Generic Name",
     "medMarket":"Medicine Brand Name",
-    "multiline":"Multiline toolbar"
+    "multi":"Multiline toolbar",
+    "ftd":"From This Device",
+    "ftw":"From the Web"
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="newsstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
 </head>
 <body>
     <header>
@@ -15,6 +16,7 @@
             <script>
                 $.get("newsnavbar.html", function(data){
                     $("#newsnav").append(data);
+                    $("#newsnav").append(`<div class="language_flag"><a href="" onclick="setLanguage('en')"><span class="fi fi-us flags"></span></a><a href="" onclick="setLanguage('th')"><span class="fi fi-th flags"></span></a></div>`);
                 });
             </script>
         </div>
@@ -23,7 +25,7 @@
     <div class = "container">
         <div class="add_head">
             <a href="news_list_page.html" class="back-icon" id="backIcon"><i class="fa fa-arrow-left"></i></a>
-            <h1>Preview News</h1>
+            <h1 id="previewNews">Preview News</h1>
         </div>
         <div class="previewing">
             <textarea id="fromadd" name="fromadd" rows="100" cols="100">text/picture</textarea>
