@@ -453,7 +453,7 @@ header{
     border-style: none;
     border-radius: 7px;
 }
-@media screen and (min-width: 460px) and (Max-width: 1024px){
+@media screen and (min-width: 460px) and (Max-width: 1350px){
     .interactable-section{
         margin-left: 50px;
     }
