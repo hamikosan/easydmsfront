@@ -270,6 +270,7 @@ $(document).ready(function(){
     $('#sev').text(language.sevDrop);
     $('#dashboard').text(language.dashboard);
     $('h4#dash-header').text(language.dashboard);
+    $('h1#dash-header').text(language.dashboard);
     $('button#showPwBtn').text(language.show);
     
     $('h1#pw').text(language.password);//password on account table
