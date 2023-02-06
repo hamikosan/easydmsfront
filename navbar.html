@@ -1,7 +1,10 @@
 <nav class="navigation hide" id="navigation">
     <a class="close-icon" id="close-icon"><i class="fa fa-close" ></i></a>
     <ul class="nav-list">
-        <span class="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span><br><br><br>
+        <div style="display: flex;">
+            <span class="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+            <img style="height: fit-content;width: 300px;" src="image/logo.png">
+        </div>    
         <li class="nav-item"><a href="report_page.html"  ><i class="fa fa-clipboard"></i> <div id="adr-header"></div></a></li>
         <li class="nav-item"><a href="report_check_page.html"><i class="fa fa-exclamation-circle"></i> <div id="track-header"></div></a></li>
         <li class="nav-item"><a href="news page/news_list_page.html"><i class="fa fa-newspaper-o"></i> <div id="news-header"></div></a></li>
@@ -12,4 +15,4 @@
     </ul>
 </nav>
 <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
-<img src="image/logo.png">
+<img id="logo" src="image/logo.png">

@@ -2,14 +2,18 @@
 function hideIconBar(){
     var iconBar = document.getElementById("iconBar");
     var navigation = document.getElementById("navigation");
+    var logo = document.getElementById("logo");
     iconBar.setAttribute("style", "display:none;");
+    logo.setAttribute("style", "display:none;");
     navigation.classList.remove("hide");
 }
 
 function showIconBar(){
     var iconBar = document.getElementById("iconBar");
     var navigation = document.getElementById("navigation");
+    var logo = document.getElementById("logo");
     iconBar.setAttribute("style", "display:block;");
+    logo.setAttribute("style", "display:flex;");
     navigation.classList.add("hide");
 }
 /*new FroalaEditor('div#froala-editor', {
