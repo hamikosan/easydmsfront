@@ -265,7 +265,7 @@ $(document).ready(function(){
     $('#reset-inst').text(language.reset_inst);
     $('#sev').text(language.sevDrop);
     $('#dashboard').text(language.dashboard);
-    $('#showPwBtn').text(language.show);
+    $('button#showPwBtn').text(language.show);
     
     $('h1#pw').text(language.password);//password on account table
     
@@ -340,26 +340,32 @@ $(".field-icon").click(function() {
     }
 });
 /*password box */
-
-function pwPopUP(){
-  var pwmodal = document.getElementById("password-detail");
-  var pwbtn = document.getElementById("showPwBtn");
-  var pwspan = document.getElementsByClassName("closepw")[0];
-
-  // When the user clicks the button, open the modal 
-  pwbtn.onclick = function() {
-    pwmodal.style.display = "block";
-  }
-
-  // When the user clicks on <span> (x), close the modal
-  pwspan.onclick = function() {
-    pwmodal.style.display = "none";
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == pwmodal) {
+  for(i=1;i<=$('#account-report tr').length;i++){
+    $('button#showPwBtn'+i.toString()).text(language.show);
+    var button = document.getElementById('showPwBtn'+i.toString());
+    button.style.backgroundColor = "#0077b3";
+    button.style.fontSize="16px";
+    button.style.color="#a4d5f6";
+    button.style.cursor="pointer";
+    button.style.width="70px";
+    button.style.height="25px";
+    button.style.borderRadius="7px";
+    button.style.borderStyle="none";
+    var pwmodal = document.getElementById("password-detail");
+    var pwspan = document.getElementsByClassName("closepw")[0];
+    // When the user clicks the button, open the modal 
+    button.onclick = function() {
+      pwmodal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    pwspan.onclick = function() {
       pwmodal.style.display = "none";
     }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == pwmodal) {
+        pwmodal.style.display = "none";
+      }
+    }
+    ;
   }
-}
