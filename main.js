@@ -263,29 +263,46 @@ $(document).ready(function(){
     $('#resetpwButton').text(language.reset_password);
     $('#reset-title').text(language.reset_password);
     $('#reset-inst').text(language.reset_inst);
+    $('#sev').text(language.sevDrop);
      });
 
 /*sort filter function*/
 function filterFunction() {
     // Declare variables
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
+    var reportinput, filter, reporttable, reporttr, reporttd,uncheckinput,unchecktable,unchecktr,unchecktd, i, txtValue;
+    reportinput = document.getElementById("myInput");
+    uncheckinput = document.getElementById("myInput2");
+    filterreport = reportinput.value.toUpperCase();
+    filteruncheck = uncheckinput.value.toUpperCase();
+    reporttable = document.getElementById("receive-report");
+    unchecktable = document.getElementById("unreceive-report");
+    reporttr = reporttable.getElementsByTagName("tr");
+    unchecktr = unchecktable.getElementsByTagName("tr");
   
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
+    // Loop through all report table rows, and hide those who don't match the search query
+    for (i = 0; i < reporttr.length; i++) {
+      reporttd = reporttr[i].getElementsByTagName("td")[0];
+      if (reporttd) {
+        reporttxtValue = reporttd.textContent || reporttd.innerText;
+        if (reporttxtValue.toUpperCase().indexOf(filterreport) > -1) {
+          reporttr[i].style.display = "";
         } else {
-          tr[i].style.display = "none";
+          reporttr[i].style.display = "none";
         }
       }
     }
+    // Loop through all uncheck report table rows, and hide those who don't match the search query
+    for (i = 0; i < unchecktr.length; i++) {
+        unchecktd = unchecktr[i].getElementsByTagName("td")[0];
+        if (unchecktd) {
+          unchecktxtValue = unchecktd.textContent || unchecktd.innerText;
+          if (unchecktxtValue.toUpperCase().indexOf(filteruncheck) > -1) {
+            unchecktr[i].style.display = "";
+          } else {
+            unchecktr[i].style.display = "none";
+          }
+        }
+      }
   }
   /*show hide password*/
   /*$(".toggle-password").click(function() {
@@ -317,4 +334,4 @@ $(".field-icon").click(function() {
     input.attr("type", "password");
     }
 });
-
+/*password table hiding */
