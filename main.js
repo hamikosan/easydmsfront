@@ -276,7 +276,7 @@ $(document).ready(function(){
      });
 
 /*sort filter function*/
-function filterFunction() {
+/*function filterFunction() {
     // Declare variables
     var reportinput, filter, reporttable, reporttr, reporttd,uncheckinput,unchecktable,unchecktr,unchecktd, i, txtValue;
     reportinput = document.getElementById("myInput");
@@ -312,21 +312,32 @@ function filterFunction() {
           }
         }
       }
-  }
-  /*show hide password*/
-  /*$(".toggle-password").click(function() {
+  }*/
 
-    $(this).toggleClass("fa fa-eye");
-    var input = $($(this).attr("toggle"));
-    if (input.attr("type") == "password") {
-      input.attr("type", "text");
+  
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function medDropyFunction() {
+  document.getElementById("medDropdown").classList.toggle("show");
+}
+
+function medfilterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("medDropdown");
+  a = div.getElementsByTagName("input");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
     } else {
-      input.attr("type", "password");
+      a[i].style.display = "none";
     }
-  });*/
-
-
-
+  }
+}
+  /*show hide password*/
+  
 $(".field-icon").click(function() {
 
     if ($(this).hasClass("fa fa-eye-slash")) {  //check the class
