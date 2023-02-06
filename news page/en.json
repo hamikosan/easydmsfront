@@ -90,5 +90,6 @@
     "multi":"Multiline toolbar",
     "ftd":"From This Device",
     "ftw":"From the Web",
-    "both":"Both"
+    "both":"Both",
+    "dashboard":"Dashboard"
 }

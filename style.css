@@ -227,7 +227,8 @@ header{
     display: block;
     width: fit-content;
     background-color: #f1f1f1;
-    border-collapse: collapse; 
+    border-collapse: collapse;  
+    word-wrap:break-word
   }
   #receive-report{
     margin-left: 20px;
@@ -489,7 +490,7 @@ header{
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
   }
-  #delete_confirm,#dis_confirm {
+  #delete_confirm,#dis_confirm,#passwordPopup {
     background-color: #a4d5f6;
     margin: auto;
     padding: 20px;
@@ -499,7 +500,7 @@ header{
     height: 300px;
     display: block;
   }
-  #delete_confirm h1,#dis_confirm h1{
+  #delete_confirm h1,#dis_confirm h1,#passwordPopup h1{
     color: #0077b3;
     font-size: 30px;
     text-align: center;
@@ -515,6 +516,16 @@ header{
     border-style: none;
     border-radius: 7px;
     margin-left: 95px;
+  }
+  button#showPwBtn{
+    background-color: #0077b3;
+    font-size: 16px;
+    color: #a4d5f6;
+    cursor: pointer;
+    width: 70px;
+    height: 25px;
+    border-radius: 7px;
+    border-style: none;
   }
 /*month year sort filter section*/
 #monDropdown select{  
@@ -548,4 +559,18 @@ header{
 }
 .language_flag span.fi-th{
     margin-left: 6px;
+}
+/*close icon style*/
+/* The Close Button */
+.closepw {
+    color: #0077b3;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+.closepw:hover,
+.closepw:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
 }

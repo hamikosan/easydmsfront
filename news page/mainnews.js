@@ -157,5 +157,6 @@ $(() => {
       $('button#update').text(language.update);
       $('button#preview').html("<a href='news_preview.html'>"+language.preview+"</a>");
       $('#previewNews').text(language.preview+" "+language.news);
+      $('#dashboard').text(language.dashboard);
         });
     

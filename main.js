@@ -264,6 +264,11 @@ $(document).ready(function(){
     $('#reset-title').text(language.reset_password);
     $('#reset-inst').text(language.reset_inst);
     $('#sev').text(language.sevDrop);
+    $('#dashboard').text(language.dashboard);
+    $('#showPwBtn').text(language.show);
+    
+    $('h1#pw').text(language.password);//password on account table
+    
      });
 
 /*sort filter function*/
@@ -334,4 +339,27 @@ $(".field-icon").click(function() {
     input.attr("type", "password");
     }
 });
-/*password table hiding */
+/*password box */
+
+function pwPopUP(){
+  var pwmodal = document.getElementById("password-detail");
+  var pwbtn = document.getElementById("showPwBtn");
+  var pwspan = document.getElementsByClassName("closepw")[0];
+
+  // When the user clicks the button, open the modal 
+  pwbtn.onclick = function() {
+    pwmodal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  pwspan.onclick = function() {
+    pwmodal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == pwmodal) {
+      pwmodal.style.display = "none";
+    }
+  }
+}

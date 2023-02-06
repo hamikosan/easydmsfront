@@ -90,5 +90,7 @@
     "multi":"Multiline toolbar",
     "ftd":"From This Device",
     "ftw":"From the Web",
-    "reset_inst":"Enter your new password."
+    "reset_inst":"Enter your new password.",
+    "dashboard":"Dashboard",
+    "show":"Show"
 }
