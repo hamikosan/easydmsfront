@@ -269,6 +269,7 @@ $(document).ready(function(){
     $('#reset-inst').text(language.reset_inst);
     $('#sev').text(language.sevDrop);
     $('#dashboard').text(language.dashboard);
+    $('h4#dash-header').text(language.dashboard);
     $('button#showPwBtn').text(language.show);
     
     $('h1#pw').text(language.password);//password on account table
@@ -314,7 +315,7 @@ $(document).ready(function(){
       }
   }*/
 
-  
+
   /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function medDropyFunction() {
