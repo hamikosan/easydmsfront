@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/22.2.3/css/dx.light.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
     
-    <script type="text/javascript" src="node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="https://unpkg.com/devextreme-quill@1.5.18/dist/dx-quill.min.js"></script>
     <script src="https://cdn3.devexpress.com/jslib/22.2.3/js/dx.all.js"></script>
@@ -55,13 +55,7 @@
             </div>
             <div class="prewriting" id="prewriting">
                 <h3 id="newsDetail"></h3>
-                
-                    <!--<div id="froala"></div>
-                        <script> var editor = new FroalaEditor('#froala');
-                    </script>-->
-                    
-        
-                    <div class="dx-viewport" style="border-radius: 7px;">
+                    <!--<div class="dx-viewport" style="border-radius: 7px;">
                         <div class="html-editor">
                         </div>
                         <div class="options">
@@ -76,12 +70,62 @@
                             <div id="image-uploader-tabs"></div>
                         </div>
                         </div>
-                    </div> 
+                    </div> -->
+                    <div id="editor-container">
+                        <div id="editor-menu">
+                            <button id="undoButton" title="Undo" ><i class="fa fa-rotate-left" aria-hidden="true"></i></button>
+                            <button id="redoBbutton" title="Redo"><i class="fa fa-rotate-right" aria-hidden="true"></i></button>
+                            <select name="cars" id="cars" onchange="fontsize()">
+                                <option value="" disabled selected>Font size</option>
+                                <option value="3">Small</option>
+                                <option value="5">Medium</option>
+                                <option value="7">Large</option>
+                              </select>
+                              <!--<button id="colorpicker" onclick="showColorPicker()" onchange="colorchange()"><i class="fa fa-tint" aria-hidden="true"></i></button>-->
+                            <input type="color" id="Colorpicker" value="#0000ff" onchange="colorchange()">
+                            <button id="bold-button" title="Bold"><i class="fa fa-bold" aria-hidden="true"></i></button>
+                            <button id="italic-button" title="Italic"><i class="fa fa-italic" aria-hidden="true"></i></button>
+                            <button id="underline-button" title="Underline"><i class="fa fa-underline" aria-hidden="true"></i></button>
+                            <button id="justifyLeft-button" title="Justify Left"><i class="fa fa-align-left" aria-hidden="true"></i></button>
+                            <button id="justifyRight-button" title="Justify Right"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+                            <button id="justifyCenter-button" title="Justify Center"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+                            <button id="justifyFull-button" title="Justify Full"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+                            <button id="list-button" title="Bullet List"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            <button id="createLink-button" title="Create Link"><i class="fa fa-link" aria-hidden="true"></i></button>
+                            <button id="unlink-button" title="Unlink"><i class="fa fa-chain-broken" aria-hidden="true"></i></button>
+                            <button id="image-button" title="Picture"><i class="fa fa-file-image-o" aria-hidden="true"></i></button>
+                      
+                        </div>
+                        <div id="editor-text" contenteditable="true" spellcheck="true"></div>
+                    </div>
+                    
+                    <div id="myModal" class="modal">
+                    
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                          <span class="close">&times;</span><br>
+                          <span>add image url</span><br><br>
+                          <input type="text" id="imgurl" >
+                          <button onclick="insertpic()"> add img</button>
+                        </div>
+                      
+                      </div>
+                      <div id="myModal2" class="modal">
+                          <div class="modal-content">
+                        <span class="close" id="close2">&times;</span><br>
+                        <span>add url</span><br><br>
+                        <input type="text" id="link" >
+                        <button onclick="addlink()"> add link</button>
+                      </div>
+                      </div>
                     <div class="add_page_button">
                         <button class="preview_button" id="preview" value="preview" onclick="location.href='news_preview.html'"></button>
-                        <button class="page_add_button" id="add" value="add"></button>
-                </div>       
+                        <button class="page_add_button" id="add" value="add" onclick="show()"></button>
+                    </div>       
             </div>
+            <!--<div id="colorModal" class="modal">
+                        <input type="color" id="Colorpicker" onchange="colorchange()">
+                    </div>-->
             <div class="outsidelink_form" id="outsidelink_form" style="display: none">
                 <h3>URL</h3>
                     <input type="text" id="outsidelinktext">

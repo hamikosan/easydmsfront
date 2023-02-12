@@ -33,7 +33,24 @@ function showOutSideLink() {
         detail.style.display="block";
     }
 }
+function showColorPicker() {
+    var colorbox = document.getElementById("colorModal");
+    var btn = document.getElementById("colorpicker");
+    //var close = document.getElementById("no_button");
+    btn.onclick = function() {
+      colorbox.style.display = "block";
+    }
 
+    /*close.onclick = function() {
+      colorbox.style.display = "none";
+    }*/
+    
+    window.onclick = function(event) {
+        if (event.target == colorbox) {
+            colorbox.style.display = "none";
+        }
+    }
+}
 function deletePopUP(){
     var confirmbox = document.getElementById("modal");
     var btn = document.getElementById("deleteB");
