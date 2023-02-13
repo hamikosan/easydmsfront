@@ -16,7 +16,7 @@ h4{
     font-size: 65px;
     margin: 0;
     color: #0077b3;
-    margin-left: 180px;
+    margin-left: 10%;
 }
 a,.newsusern{
     color: #cdda95;
@@ -114,7 +114,7 @@ input.forchecksize{
     }
 }
 
-@media screen and (min-width: 460px) and (Max-width: 1024px){
+@media screen and (min-width: 460px) and (Max-width: 1350px){
     .container{
         margin: 15px;
         padding: 15px;
@@ -141,9 +141,10 @@ input.forchecksize{
     }
     h4{
         font-size: 30px;
-        margin-left: 120px;
+        margin-left: 10%;
     }
 }
+
 header{
     margin-inline: 10px;
 }
@@ -218,6 +219,29 @@ header{
     margin-top: 15px;
 }
 
+@media screen and (min-width: 460px) and (Max-width: 1350px){
+    .navigation{
+        max-height: auto;
+    }
+    
+    .close-icon i{
+        font-size:30px;
+    }
+    
+    .nav-item a{
+        /*float:left;*/
+        display:flex;
+        margin-inline: 1%;
+        padding: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    
+    .bar-icon{
+        font-size: 30px;
+    }
+}
 @media screen and (max-width: 460px){
     .navigation{
         max-height: auto;
@@ -353,7 +377,7 @@ header{
         height: 30px;
     }
 }
-@media screen and (min-width: 460px) and (Max-width: 1024px){
+@media screen and (min-width: 460px) and (Max-width: 135px){
     .add_row{
         display: block;
         margin-left: 106px;
@@ -435,7 +459,7 @@ header{
     margin-top: 20px;
     
 }
-@media screen and (min-width: 460px) and (Max-width: 1024px){
+@media screen and (min-width: 460px) and (Max-width: 1350px){
 
     .page_add_button,.page_addurl_button{
         margin-top: 0px;
@@ -548,7 +572,7 @@ header{
     margin-bottom: 15px;  
     align-self: center
 }
-@media screen and (min-width: 460px) and (Max-width: 1024px){
+@media screen and (min-width: 460px) and (Max-width: 1350px){
     .radio-visual{
         width: fit-content;
         
@@ -641,4 +665,16 @@ header{
 }
 .language_flag span.fi-th{
     margin-left: 6px;
+}
+.navhead{
+    display: flex;
+}
+.navhead img{
+    height: fit-content;
+    width: 300px;
+}
+@media screen and (min-width: 460px) and (Max-width: 1350px){
+    .navhead img{
+        width: 80%;
+    }
 }

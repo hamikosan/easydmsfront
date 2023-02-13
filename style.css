@@ -15,7 +15,7 @@ h1{
 h4{
     font-size: 50px;
     margin: 0;
-    margin-left: 100px;
+    margin-left: 10%;
 }
 a{
     color: #cdda95;
@@ -47,7 +47,7 @@ img{
     
 }
 
-@media screen and (min-width: 460px) and (Max-width: 1024px){
+@media screen and (min-width: 460px) and (Max-width: 1350px){
     .container{
         margin: 15px;
         padding: 15px;
@@ -62,7 +62,7 @@ img{
         font-size: 30px;
     }
     h4#track-header{
-        margin-left: 120px;
+        margin-left: 10%;
     }
 }
 header{
@@ -143,17 +143,17 @@ header{
     .navigation{
         max-height: auto;
     }
-    
     .close-icon i{
         font-size:30px;
     }
     
     .nav-item a{
-        float:left;
-        display:inline;
-        margin-inline: 3px;
-        font-size: 10px;
+        /*float:left;*/
+        display:flex;
+        margin-inline: 1%;
         padding: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     
     .bar-icon,h4{
@@ -161,7 +161,29 @@ header{
     }
  
 }
-
+@media screen and (min-width: 460px) and (Max-width: 1350px){
+    .navigation{
+        max-height: auto;
+    }
+    
+    .close-icon i{
+        font-size:30px;
+    }
+    
+    .nav-item a{
+        /*float:left;*/
+        display:flex;
+        margin-inline: 1%;
+        padding: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    
+    .bar-icon,h4{
+        font-size: 30px;
+    }
+}
 /*report page searching filtering*/
 /* The search field */
 #myInput,#myInput2 {
@@ -263,7 +285,7 @@ header{
     border-radius: 7px;
     margin-left: 20px;
 }
-@media screen and (min-width: 460px) and (Max-width: 1024px){
+@media screen and (min-width: 460px) and (Max-width: 1350px){
     .container{
         display: block;
     }
@@ -320,7 +342,7 @@ header{
     width: 880px;
 }
 
-@media screen and (min-width: 460px) and (Max-width: 1024px){
+@media screen and (min-width: 460px) and (Max-width: 1350px){
     .report-check-row button{
         margin-left: 300px;
         margin-bottom: 15px;
@@ -453,6 +475,7 @@ header{
     border-style: none;
     border-radius: 7px;
 }
+
 @media screen and (min-width: 460px) and (Max-width: 1350px){
     .interactable-section{
         margin-left: 50px;
@@ -595,4 +618,17 @@ cursor: pointer;
     font-size: 20px;
     text-align: center;
     margin: 40.5%;
+}
+
+.navhead{
+    display: flex;
+}
+.navhead img{
+    height: fit-content;
+    width: 300px;
+}
+@media screen and (min-width: 460px) and (Max-width: 1350px){
+    .navhead img{
+        width: 80%;
+    }
 }
