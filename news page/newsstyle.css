@@ -578,7 +578,12 @@ header{
         
     }
     .visibility-set{
-        margin-left: 120px;
+        margin-left: 42%;
+    }
+}
+@media screen and (max-width: 660px){
+    .visibility-set{
+        margin-left: 30%;
     }
 }
 /*html editor*/
