@@ -377,7 +377,7 @@ header{
         height: 30px;
     }
 }
-@media screen and (min-width: 460px) and (Max-width: 135px){
+@media screen and (min-width: 460px) and (Max-width: 1350px){
     .add_row{
         display: block;
         margin-left: 106px;
